@@ -5,6 +5,7 @@ import { useState } from "react";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Credentials", href: "#certifications" },
@@ -19,8 +20,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-800/70 bg-slate-950/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
 
         {/* Brand */}
         <a
@@ -45,7 +46,6 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-1 md:flex">
-
           {navItems.map((item, index) => (
             <a
               key={item.href}
@@ -61,7 +61,6 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-cyan-400 transition-all duration-300 group-hover:w-2/3" />
             </a>
           ))}
-
         </nav>
 
         {/* Status */}
@@ -100,15 +99,12 @@ export default function Navbar() {
             />
           </div>
         </button>
-
       </div>
 
       {/* Mobile Navigation */}
       {menuOpen && (
         <div className="border-t border-slate-800 bg-slate-950/95 px-6 py-5 md:hidden">
-
           <nav className="space-y-1">
-
             {navItems.map((item, index) => (
               <a
                 key={item.href}
@@ -123,7 +119,6 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-
           </nav>
 
           <div className="mt-4 flex items-center gap-2 border-t border-slate-800 pt-4">
@@ -133,10 +128,8 @@ export default function Navbar() {
               Available for opportunities
             </span>
           </div>
-
         </div>
       )}
-
     </header>
   );
 }
