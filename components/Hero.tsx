@@ -65,8 +65,10 @@ export default function Hero() {
               technologies, and artificial intelligence.
             </p>
 
+            {/* Hero actions */}
             <div className="mt-10 flex flex-wrap gap-4">
 
+              {/* Projects */}
               <a
                 href="#projects"
                 className="group inline-flex items-center gap-3 rounded-xl border border-cyan-400/40 bg-cyan-400/10 px-6 py-3.5 text-sm font-semibold text-cyan-300 transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
@@ -78,9 +80,24 @@ export default function Hero() {
                 </span>
               </a>
 
+              {/* Resume */}
+              <a
+                href="/resume/Sanjith_R_S_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 rounded-xl border border-slate-700 bg-slate-900/50 px-6 py-3.5 text-sm font-semibold text-slate-200 transition-all duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/5 hover:text-cyan-300"
+              >
+                View Resume
+
+                <span className="text-slate-500 transition-transform duration-300 group-hover:translate-y-[-2px] group-hover:text-cyan-400">
+                  ↗
+                </span>
+              </a>
+
+              {/* Contact */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-3 rounded-xl border border-slate-700 bg-slate-900/50 px-6 py-3.5 text-sm font-semibold text-slate-200 transition-all duration-300 hover:border-slate-500 hover:bg-slate-800/70"
+                className="inline-flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-950/50 px-6 py-3.5 text-sm font-semibold text-slate-400 transition-all duration-300 hover:border-slate-600 hover:bg-slate-900/70 hover:text-slate-200"
               >
                 Establish Connection
               </a>

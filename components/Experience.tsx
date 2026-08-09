@@ -1,3 +1,20 @@
+function ExperienceIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.6}
+      className="h-5 w-5"
+      aria-hidden="true"
+    >
+      <rect x="4" y="7" width="16" height="12" rx="2" />
+      <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+      <path d="M4 11h16M10 11v2h4v-2" />
+    </svg>
+  );
+}
+
 export default function Experience() {
   return (
     <section
@@ -14,7 +31,7 @@ export default function Experience() {
 
           <div className="flex items-center gap-4">
             <span className="font-mono text-xs tracking-[0.3em] text-cyan-400">
-              05 // EXPERIENCE
+              06 // EXPERIENCE
             </span>
 
             <div className="h-px flex-1 bg-slate-800" />
@@ -27,11 +44,20 @@ export default function Experience() {
           <div className="mt-10 grid gap-8 md:grid-cols-[1fr_240px] md:items-end">
 
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-slate-600">
-                PROFESSIONAL & LEADERSHIP HISTORY
-              </p>
 
-              <h2 className="mt-3 text-5xl font-bold tracking-tight text-white md:text-6xl">
+              <div className="flex items-center gap-3">
+
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/5 text-cyan-400">
+                  <ExperienceIcon />
+                </div>
+
+                <p className="font-mono text-xs uppercase tracking-[0.3em] text-slate-600">
+                  PROFESSIONAL & LEADERSHIP HISTORY
+                </p>
+
+              </div>
+
+              <h2 className="mt-4 text-5xl font-bold tracking-tight text-white md:text-6xl">
                 Experience
                 <span className="text-cyan-400">.</span>
               </h2>
@@ -40,12 +66,14 @@ export default function Experience() {
                 A chronological record of roles, progression,
                 responsibility, and professional experience.
               </p>
+
             </div>
 
             {/* Record Status */}
             <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-5 font-mono">
 
               <div className="flex items-center justify-between">
+
                 <span className="text-[8px] tracking-[0.2em] text-slate-600">
                   RECORD_STATUS
                 </span>
@@ -53,9 +81,11 @@ export default function Experience() {
                 <span className="text-[8px] text-emerald-400">
                   ● ACTIVE
                 </span>
+
               </div>
 
               <div className="mt-5">
+
                 <p className="text-[8px] tracking-[0.2em] text-slate-700">
                   ORGANIZATIONS
                 </p>
@@ -63,6 +93,7 @@ export default function Experience() {
                 <p className="mt-1 text-2xl text-white">
                   02
                 </p>
+
               </div>
 
             </div>
@@ -80,7 +111,7 @@ export default function Experience() {
           <div className="absolute left-[86px] top-0 hidden h-full w-px bg-gradient-to-b from-cyan-400/70 via-cyan-400/30 to-transparent lg:block" />
 
           {/* ======================================= */}
-          {/* U&I TRUST — SINGLE ORGANIZATION */}
+          {/* U&I TRUST */}
           {/* ======================================= */}
 
           <div className="relative mb-24 lg:grid lg:grid-cols-[170px_1fr] lg:gap-12">
@@ -107,7 +138,10 @@ export default function Experience() {
               {/* Scan line */}
               <div className="absolute left-0 top-0 h-px w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full" />
 
-              <div className="p-8 md:p-10">
+              {/* Glow */}
+              <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-cyan-400/5 blur-3xl transition-all duration-500 group-hover:bg-cyan-400/10" />
+
+              <div className="relative p-8 md:p-10">
 
                 {/* Organization Header */}
                 <div className="flex flex-col justify-between gap-6 border-b border-slate-800 pb-8 md:flex-row md:items-end">
@@ -134,13 +168,10 @@ export default function Experience() {
 
                 </div>
 
-                {/* ================================= */}
                 {/* ROLE 01 */}
-                {/* ================================= */}
 
                 <div className="mt-10 grid gap-6 md:grid-cols-[150px_1fr]">
 
-                  {/* Year */}
                   <div>
 
                     <p className="font-mono text-[9px] tracking-[0.2em] text-slate-600">
@@ -153,8 +184,7 @@ export default function Experience() {
 
                   </div>
 
-                  {/* Role */}
-                  <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
+                  <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6 transition-colors duration-300 hover:border-slate-700">
 
                     <div className="flex flex-wrap items-center justify-between gap-3">
 
@@ -191,7 +221,7 @@ export default function Experience() {
                       ].map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-md border border-slate-800 px-3 py-1.5 font-mono text-[9px] text-slate-500"
+                          className="rounded-md border border-slate-800 px-3 py-1.5 font-mono text-[9px] text-slate-500 transition-colors hover:border-slate-700 hover:text-slate-300"
                         >
                           {tag}
                         </span>
@@ -203,9 +233,7 @@ export default function Experience() {
 
                 </div>
 
-                {/* ================================= */}
                 {/* PROMOTION */}
-                {/* ================================= */}
 
                 <div className="my-8 flex items-center gap-4 md:ml-[150px]">
 
@@ -227,13 +255,10 @@ export default function Experience() {
 
                 </div>
 
-                {/* ================================= */}
                 {/* ROLE 02 */}
-                {/* ================================= */}
 
                 <div className="grid gap-6 md:grid-cols-[150px_1fr]">
 
-                  {/* Year */}
                   <div>
 
                     <p className="font-mono text-[9px] tracking-[0.2em] text-cyan-400">
@@ -246,8 +271,7 @@ export default function Experience() {
 
                   </div>
 
-                  {/* Role */}
-                  <div className="rounded-xl border border-cyan-400/20 bg-cyan-400/[0.025] p-6">
+                  <div className="rounded-xl border border-cyan-400/20 bg-cyan-400/[0.025] p-6 transition-all duration-300 hover:border-cyan-400/30">
 
                     <div className="flex flex-wrap items-center justify-between gap-3">
 
@@ -286,7 +310,7 @@ export default function Experience() {
                       ].map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-md border border-cyan-400/10 bg-cyan-400/5 px-3 py-1.5 font-mono text-[9px] text-slate-400"
+                          className="rounded-md border border-cyan-400/10 bg-cyan-400/5 px-3 py-1.5 font-mono text-[9px] text-slate-400 transition-colors hover:border-cyan-400/20 hover:text-cyan-300"
                         >
                           {tag}
                         </span>
@@ -299,6 +323,7 @@ export default function Experience() {
                 </div>
 
                 {/* Progression Footer */}
+
                 <div className="mt-10 flex items-center justify-center gap-3 border-t border-slate-800 pt-6">
 
                   <span className="font-mono text-[8px] tracking-[0.2em] text-slate-700">
@@ -322,7 +347,7 @@ export default function Experience() {
           </div>
 
           {/* ======================================= */}
-          {/* VALTECH — SEPARATE ORGANIZATION */}
+          {/* VALTECH */}
           {/* ======================================= */}
 
           <div className="relative lg:grid lg:grid-cols-[170px_1fr] lg:gap-12">
@@ -331,11 +356,11 @@ export default function Experience() {
             <div className="hidden lg:block">
 
               <p className="font-mono text-[10px] tracking-[0.25em] text-cyan-400">
-                2026
+                02
               </p>
 
               <p className="mt-2 font-mono text-2xl font-semibold text-white">
-                02
+                2026
               </p>
 
               <p className="mt-2 font-mono text-[8px] uppercase tracking-[0.15em] text-slate-700">
@@ -352,9 +377,12 @@ export default function Experience() {
 
               <div className="absolute left-0 top-0 h-px w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full" />
 
-              <div className="grid md:grid-cols-[1fr_190px]">
+              <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-cyan-400/5 blur-3xl transition-all duration-500 group-hover:bg-cyan-400/10" />
+
+              <div className="relative grid md:grid-cols-[1fr_190px]">
 
                 {/* Main */}
+
                 <div className="p-8 md:p-10">
 
                   <div className="flex flex-wrap items-center gap-3">
@@ -412,7 +440,7 @@ export default function Experience() {
                     ].map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-md border border-slate-800 px-3 py-1.5 font-mono text-[9px] text-slate-500"
+                        className="rounded-md border border-slate-800 px-3 py-1.5 font-mono text-[9px] text-slate-500 transition-colors hover:border-slate-700 hover:text-slate-300"
                       >
                         {tag}
                       </span>
@@ -423,6 +451,7 @@ export default function Experience() {
                 </div>
 
                 {/* Metadata */}
+
                 <div className="border-t border-slate-800 bg-slate-900/20 p-8 md:border-l md:border-t-0">
 
                   <p className="font-mono text-[8px] tracking-[0.2em] text-slate-700">
@@ -432,6 +461,7 @@ export default function Experience() {
                   <div className="mt-6 space-y-6">
 
                     <div>
+
                       <p className="font-mono text-[8px] text-slate-700">
                         YEAR
                       </p>
@@ -439,9 +469,11 @@ export default function Experience() {
                       <p className="mt-1 font-mono text-xs text-slate-400">
                         2026
                       </p>
+
                     </div>
 
                     <div>
+
                       <p className="font-mono text-[8px] text-slate-700">
                         STATUS
                       </p>
@@ -449,9 +481,11 @@ export default function Experience() {
                       <p className="mt-1 font-mono text-[9px] text-emerald-400">
                         ✓ COMPLETED
                       </p>
+
                     </div>
 
                     <div>
+
                       <p className="font-mono text-[8px] text-slate-700">
                         TYPE
                       </p>
@@ -459,6 +493,7 @@ export default function Experience() {
                       <p className="mt-1 font-mono text-[9px] text-slate-400">
                         INTERNSHIP
                       </p>
+
                     </div>
 
                   </div>
@@ -479,11 +514,17 @@ export default function Experience() {
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-y border-slate-800 py-4 font-mono text-[9px] uppercase tracking-[0.2em] text-slate-700">
 
-          <span>EXPERIENCE_LOG</span>
+          <span>
+            EXPERIENCE_LOG
+          </span>
 
-          <span>02 ORGANIZATIONS</span>
+          <span>
+            02 ORGANIZATIONS
+          </span>
 
-          <span>U&I → LEADERSHIP</span>
+          <span>
+            U&I → LEADERSHIP
+          </span>
 
           <span className="text-emerald-500/70">
             STATUS: ACTIVE

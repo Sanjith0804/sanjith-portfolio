@@ -1,3 +1,20 @@
+function GraduationIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      className="h-4 w-4"
+      aria-hidden="true"
+    >
+      <path d="m3 9 9-5 9 5-9 5-9-5Z" />
+      <path d="M7 11.2V15c0 1.7 2.2 3 5 3s5-1.3 5-3v-3.8" />
+      <path d="M21 10v5" />
+    </svg>
+  );
+}
+
 export default function Education() {
   const education = [
     {
@@ -35,17 +52,22 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="relative overflow-hidden border-t border-slate-800/70 py-24 sm:py-28"
+      className="relative px-6 py-24 sm:py-28"
     >
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+      <div className="mx-auto w-full max-w-6xl">
 
         {/* Section header */}
         <div className="mb-16 flex items-center gap-4">
           <span className="font-mono text-xs tracking-[0.3em] text-cyan-400">
-            04 // EDUCATION
+            03 // EDUCATION
           </span>
 
           <div className="h-px flex-1 bg-slate-800" />
+
+          <div className="hidden items-center gap-2 font-mono text-[9px] uppercase tracking-[0.2em] text-slate-700 sm:flex">
+            <GraduationIcon />
+            Academic Record
+          </div>
         </div>
 
         {/* Heading */}
