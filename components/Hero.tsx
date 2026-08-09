@@ -2,13 +2,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-24"
+      className="relative overflow-hidden px-6 py-24 sm:py-28 lg:py-32"
     >
       {/* Ambient glow */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[140px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/3 h-96 w-96 -translate-x-1/2 rounded-full bg-cyan-400/5 blur-3xl" />
 
       {/* Decorative grid */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
+      <div className="pointer-events-none absolute inset-0 opacity-30">
         <div className="absolute left-[8%] top-[18%] h-px w-32 bg-cyan-400/30" />
         <div className="absolute right-[8%] top-[30%] h-px w-40 bg-cyan-400/20" />
         <div className="absolute left-[12%] bottom-[22%] h-px w-24 bg-cyan-400/20" />
@@ -72,6 +72,7 @@ export default function Hero() {
                 className="group inline-flex items-center gap-3 rounded-xl border border-cyan-400/40 bg-cyan-400/10 px-6 py-3.5 text-sm font-semibold text-cyan-300 transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
               >
                 Explore Projects
+
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
@@ -95,20 +96,41 @@ export default function Hero() {
 
             <div className="relative overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-2xl backdrop-blur-xl">
 
-              {/* Panel header */}
-              <div className="mb-7 flex items-center justify-between border-b border-slate-800 pb-4">
-                <div>
+              {/* Profile header */}
+              <div className="mb-7 flex items-center gap-5 border-b border-slate-800 pb-5">
+
+                {/* Profile Image */}
+                <div className="relative shrink-0">
+
+                  <div className="absolute -inset-1 rounded-xl bg-cyan-400/20 blur-md" />
+
+                  <div className="relative h-20 w-20 overflow-hidden rounded-xl border border-cyan-400/30 bg-slate-900">
+                    <img
+                      src="/image.png"
+                      alt="Sanjith R S"
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+
+                </div>
+
+                {/* Profile Info */}
+                <div className="min-w-0 flex-1">
+
                   <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-500">
                     Security Profile
                   </p>
+
                   <p className="mt-1 text-sm font-semibold text-slate-200">
                     SANJITH_RS.EXE
                   </p>
+
                 </div>
 
-                <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-emerald-400">
+                <span className="shrink-0 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-emerald-400">
                   Active
                 </span>
+
               </div>
 
               {/* Status rows */}
@@ -167,19 +189,27 @@ export default function Hero() {
 
               {/* Terminal-style footer */}
               <div className="mt-8 rounded-lg border border-slate-800 bg-black/40 p-4 font-mono text-[10px] leading-6 text-slate-500">
+
                 <p>
-                  <span className="text-cyan-400">$</span> initialize_profile
+                  <span className="text-cyan-400">$</span>{" "}
+                  initialize_profile
                 </p>
+
                 <p>
-                  <span className="text-emerald-400">✓</span> identity_verified
+                  <span className="text-emerald-400">✓</span>{" "}
+                  identity_verified
                 </p>
+
                 <p>
-                  <span className="text-emerald-400">✓</span> secure_channel_established
+                  <span className="text-emerald-400">✓</span>{" "}
+                  secure_channel_established
                 </p>
+
                 <p>
                   <span className="text-cyan-400">$</span>{" "}
                   <span className="animate-pulse">_</span>
                 </p>
+
               </div>
 
             </div>

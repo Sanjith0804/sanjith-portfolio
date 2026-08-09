@@ -1,9 +1,6 @@
 export default function About() {
   return (
-    <section
-      id="about"
-      className="relative min-h-screen flex items-center px-6 py-24"
-    >
+    <section id="about" className="relative px-6 py-24 sm:py-28">
       <div className="mx-auto w-full max-w-6xl">
 
         {/* Section label */}
@@ -36,24 +33,21 @@ export default function About() {
                 </span>
               </div>
 
-              {/* Photo */}
-              <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70">
+              {/* Profile Photo */}
+              <div className="relative aspect-square overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70">
 
-                <div className="absolute inset-6 rounded-xl border border-dashed border-cyan-400/20" />
+                {/* Inner frame */}
+                <div className="pointer-events-none absolute inset-6 z-10 rounded-xl border border-dashed border-cyan-400/20" />
 
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/30 bg-cyan-400/5 text-2xl text-cyan-400">
-                    SR
-                  </div>
+                {/* Photo */}
+                <img
+                  src="/image.png"
+                  alt="Sanjith R S"
+                  className="h-full w-full object-cover object-center"
+                />
 
-                  <p className="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">
-                    Profile Image
-                  </p>
-
-                  <p className="mt-2 font-mono text-[9px] text-slate-700">
-                    IMAGE_MODULE_PENDING
-                  </p>
-                </div>
+                {/* Subtle cinematic overlay */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-cyan-400/5" />
 
               </div>
 
@@ -61,18 +55,33 @@ export default function About() {
               <div className="mt-6 space-y-3 font-mono text-xs">
 
                 <div className="flex justify-between">
-                  <span className="text-slate-600">ID</span>
-                  <span className="text-slate-400">SANJITH_RS</span>
+                  <span className="text-slate-600">
+                    ID
+                  </span>
+
+                  <span className="text-slate-400">
+                    SANJITH_RS
+                  </span>
                 </div>
 
                 <div className="flex justify-between">
-                  <span className="text-slate-600">BASE</span>
-                  <span className="text-slate-400">BENGALURU, IN</span>
+                  <span className="text-slate-600">
+                    BASE
+                  </span>
+
+                  <span className="text-slate-400">
+                    BENGALURU, IN
+                  </span>
                 </div>
 
                 <div className="flex justify-between">
-                  <span className="text-slate-600">STATUS</span>
-                  <span className="text-emerald-400">ACTIVE</span>
+                  <span className="text-slate-600">
+                    STATUS
+                  </span>
+
+                  <span className="text-emerald-400">
+                    ACTIVE
+                  </span>
                 </div>
 
               </div>
@@ -121,7 +130,7 @@ export default function About() {
             {/* Identity tags */}
             <div className="mt-10 grid gap-3 sm:grid-cols-3">
 
-              <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
+              <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4 transition-colors hover:border-cyan-400/20">
                 <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600">
                   Focus
                 </p>
@@ -131,7 +140,7 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
+              <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4 transition-colors hover:border-cyan-400/20">
                 <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600">
                   Development
                 </p>
@@ -141,7 +150,7 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
+              <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4 transition-colors hover:border-cyan-400/20">
                 <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600">
                   Exploring
                 </p>
