@@ -354,6 +354,31 @@ function ProviderMark({
 
   /*
    * IBM
+   *
+   * Uses the dedicated IBM image asset for both
+   * certifications and additional badges.
+   */
+  if (markType === "ibm") {
+    return (
+      <div
+        className={`${baseClass} ${
+          featured
+            ? "border-cyan-400/30 bg-cyan-400/10"
+            : "border-slate-800 bg-slate-900 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+        }`}
+        aria-label="IBM"
+      >
+        <img
+          src="/ibm-logo.png"
+          alt="IBM"
+          className="h-7 w-7 object-contain"
+        />
+      </div>
+    );
+  }
+
+  /*
+   * Fallback
    */
   return (
     <div
@@ -514,7 +539,6 @@ export default function Certifications() {
                   <span className="h-1 w-1 rounded-full bg-cyan-400" />
 
                   {credential.type}
-
                 </span>
               </div>
 
