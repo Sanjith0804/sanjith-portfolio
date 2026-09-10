@@ -97,7 +97,7 @@ export default function Contact() {
           <div className="flex items-center gap-4">
 
             <span className="font-mono text-xs tracking-[0.3em] text-cyan-400">
-              07 // COMMUNICATION
+              09 // COMMUNICATION
             </span>
 
             <div className="h-px flex-1 bg-slate-800" />
