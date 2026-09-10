@@ -1,3 +1,4 @@
+
 export default function Skills() {
   const modules = [
     {
@@ -65,7 +66,7 @@ export default function Skills() {
         {/* Section header */}
         <div className="mb-16 flex items-center gap-4">
           <span className="font-mono text-xs tracking-[0.3em] text-cyan-400">
-            03 // SKILLS
+            04 // SKILLS
           </span>
 
           <div className="h-px flex-1 bg-slate-800" />
@@ -172,3 +173,4 @@ export default function Skills() {
     </section>
   );
 }
+

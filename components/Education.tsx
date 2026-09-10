@@ -39,11 +39,11 @@ export default function Education() {
     },
     {
       number: "03",
-      period: "SCHOOL EDUCATION",
+      period: "2009 — 2021",
       status: "COMPLETED",
       institution: "Sudarshan Vidya Mandir",
       degree: "School Education",
-      specialization: "",
+      specialization: "Percentage — 90.60%",
       location: "Bengaluru, Karnataka",
       current: false,
     },

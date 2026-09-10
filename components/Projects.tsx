@@ -21,50 +21,66 @@ function ProjectIcon({ type }: { type: Project["icon"] }) {
     fill: "none",
     stroke: "currentColor",
     strokeWidth: 1.6,
-    className: "h-5 w-5",
+    className: "h-4 w-4",
     "aria-hidden": true,
   };
 
+  /* Adaptive Cybersecurity */
   if (type === "shield") {
     return (
       <svg {...commonProps}>
         <path d="M12 3 19 6v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3Z" />
-        <path d="m9 12 2 2 4-4" />
+        <path d="M12 8v4" />
+        <path d="M12 15v.01" />
       </svg>
     );
   }
 
+  /* DeskHop */
   if (type === "desk") {
     return (
       <svg {...commonProps}>
-        <rect x="4" y="5" width="16" height="14" rx="2" />
-        <path d="M4 10h16M8 5v5M16 5v5M8 15h3M13 15h3" />
+        <rect x="4" y="5" width="16" height="11" rx="1.5" />
+        <path d="M8 19h8" />
+        <path d="M12 16v3" />
+        <path d="M8 9h8M8 12h5" />
       </svg>
     );
   }
 
+  /* Silent SOS */
   if (type === "sos") {
     return (
       <svg {...commonProps}>
         <circle cx="12" cy="12" r="8" />
-        <path d="M12 8v5M12 16v.01" />
+        <path d="M9.5 9.5c.8-.8 1.6-1.2 2.5-1.2s1.7.4 2.5 1.2" />
+        <path d="M8 16c1.1 1 2.5 1.5 4 1.5s2.9-.5 4-1.5" />
+        <path d="M12 11v3" />
+        <path d="M12 16v.01" />
       </svg>
     );
   }
 
+  /* URL Risk Analyzer */
   if (type === "url") {
     return (
       <svg {...commonProps}>
-        <circle cx="12" cy="12" r="8" />
-        <path d="M8 12h8M12 8v8" />
+        <path d="M9.5 14.5 8 16a3 3 0 0 1-4.2-4.2l3-3A3 3 0 0 1 11 8" />
+        <path d="m14.5 9.5 1.5-1.5a3 3 0 0 1 4.2 4.2l-3 3A3 3 0 0 1 13 16" />
+        <path d="m9 12 6 0" />
+        <path d="M17 16.5v3" />
+        <path d="M17 21v.01" />
       </svg>
     );
   }
 
+  /* Integrated Surveillance Detection System */
   return (
     <svg {...commonProps}>
-      <rect x="4" y="6" width="16" height="13" rx="2" />
-      <path d="M8 6V4h8v2M8 11h8M8 15h5" />
+      <rect x="4" y="7" width="13" height="10" rx="2" />
+      <path d="m17 10 3-2v8l-3-2" />
+      <circle cx="10.5" cy="12" r="2.5" />
+      <path d="M7 19h7" />
     </svg>
   );
 }
@@ -218,7 +234,6 @@ export default function Projects() {
 
           {/* Project Cases */}
           <div className="space-y-6">
-
             {projects.map((project) => (
               <article
                 key={project.number}
@@ -238,10 +253,10 @@ export default function Projects() {
 
                     <div>
 
+                      {/* Project identity */}
                       <div className="flex items-center gap-3">
 
-                        {/* Project Icon */}
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/5 text-cyan-400 transition-all duration-300 group-hover:border-cyan-400/40 group-hover:bg-cyan-400/10">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/5 text-cyan-400 transition-all duration-300 group-hover:border-cyan-400/40 group-hover:bg-cyan-400/10">
                           <ProjectIcon type={project.icon} />
                         </div>
 
@@ -294,9 +309,8 @@ export default function Projects() {
                       {project.description}
                     </p>
 
-                    {/* Technologies */}
+                    {/* Technologies — intentionally text only */}
                     <div className="mt-7 flex flex-wrap gap-2">
-
                       {project.technologies.map((technology) => (
                         <span
                           key={technology}
@@ -305,7 +319,6 @@ export default function Projects() {
                           {technology}
                         </span>
                       ))}
-
                     </div>
 
                   </div>
@@ -339,15 +352,18 @@ export default function Projects() {
                         onClick={() =>
                           setSelectedProject(project)
                         }
-                        className="rounded-lg border border-cyan-400/30 bg-cyan-400/5 px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider text-cyan-300 transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_20px_rgba(34,211,238,0.08)]"
+                        className="rounded-lg border border-cyan-400/30 bg-cyan-400/5 px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider text-cyan-300 transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_20px_rgba(34,211,238,0.08)] focus:outline-none focus:ring-1 focus:ring-cyan-400/50"
                       >
                         View Case →
                       </button>
 
                       <a
                         href="#"
-                        onClick={(event) => event.preventDefault()}
-                        className="rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider text-slate-400 transition-all hover:border-slate-600 hover:text-slate-200"
+                        onClick={(event) =>
+                          event.preventDefault()
+                        }
+                        aria-label={`GitHub repository for ${project.title}`}
+                        className="rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider text-slate-400 transition-all hover:border-slate-600 hover:text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400/30"
                       >
                         GitHub ↗
                       </a>
@@ -357,10 +373,8 @@ export default function Projects() {
                   </div>
 
                 </div>
-
               </article>
             ))}
-
           </div>
 
           {/* Bottom System Strip */}
@@ -405,7 +419,6 @@ export default function Projects() {
                 </div>
 
                 <div>
-
                   <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
                     {selectedProject.number}
                   </p>
@@ -413,7 +426,6 @@ export default function Projects() {
                   <p className="font-mono text-xs text-slate-300">
                     CASE_FILE_VIEWER
                   </p>
-
                 </div>
 
               </div>
@@ -422,7 +434,7 @@ export default function Projects() {
                 type="button"
                 onClick={() => setSelectedProject(null)}
                 aria-label="Close project details"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/60 text-slate-400 transition-all hover:border-red-400/30 hover:text-red-300"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/60 text-slate-400 transition-all hover:border-red-400/30 hover:text-red-300 focus:outline-none focus:ring-1 focus:ring-cyan-400/30"
               >
                 ✕
               </button>
@@ -530,7 +542,6 @@ export default function Projects() {
             </div>
 
           </div>
-
         </div>
       )}
     </>

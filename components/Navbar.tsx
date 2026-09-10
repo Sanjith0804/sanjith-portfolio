@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -18,49 +19,98 @@ export default function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      /* Scroll progress */
-      const scrollTop = window.scrollY;
-      const documentHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+    let animationFrame: number | null = null;
 
-      const progress =
-        documentHeight > 0
-          ? (scrollTop / documentHeight) * 100
-          : 0;
-
-      setScrollProgress(progress);
-
-      /* Active section */
-      const sections = navItems
-        .map((item) => document.querySelector(item.href))
-        .filter(Boolean) as Element[];
-
-      let currentSection = "about";
-
-      for (const section of sections) {
-        const rect = section.getBoundingClientRect();
-
-        if (rect.top <= 140) {
-          currentSection = section.id;
-        }
+    const updateNavigation = () => {
+      if (animationFrame !== null) {
+        cancelAnimationFrame(animationFrame);
       }
 
-      setActiveSection(currentSection);
+      animationFrame = window.requestAnimationFrame(() => {
+        const scrollTop =
+          window.scrollY ||
+          document.documentElement.scrollTop ||
+          0;
+
+        /* -----------------------------------------
+           Scroll Progress
+        ----------------------------------------- */
+
+        const documentHeight =
+          document.documentElement.scrollHeight -
+          window.innerHeight;
+
+        const progress =
+          documentHeight > 0
+            ? Math.min(
+                (scrollTop / documentHeight) * 100,
+                100
+              )
+            : 0;
+
+        setScrollProgress(progress);
+
+        /* -----------------------------------------
+           Active Section
+        ----------------------------------------- */
+
+        const activationOffset = 150;
+
+        let currentSection = "about";
+
+        for (const item of navItems) {
+          const section = document.querySelector(
+            item.href
+          ) as HTMLElement | null;
+
+          if (!section) continue;
+
+          const sectionTop =
+            section.getBoundingClientRect().top;
+
+          if (sectionTop <= activationOffset) {
+            currentSection = section.id;
+          }
+        }
+
+        /* -----------------------------------------
+           Bottom of Page
+        ----------------------------------------- */
+
+        const nearBottom =
+          window.innerHeight + scrollTop >=
+          document.documentElement.scrollHeight - 20;
+
+        if (nearBottom) {
+          currentSection = "contact";
+        }
+
+        setActiveSection(currentSection);
+
+        animationFrame = null;
+      });
     };
 
-    handleScroll();
+    updateNavigation();
 
-    window.addEventListener("scroll", handleScroll, {
+    window.addEventListener("scroll", updateNavigation, {
       passive: true,
     });
 
+    window.addEventListener("resize", updateNavigation);
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", updateNavigation);
+      window.removeEventListener("resize", updateNavigation);
+
+      if (animationFrame !== null) {
+        cancelAnimationFrame(animationFrame);
+      }
     };
   }, []);
 
-  const handleNavClick = () => {
+  const handleNavClick = (sectionId: string) => {
+    setActiveSection(sectionId);
     setMenuOpen(false);
   };
 
@@ -73,13 +123,12 @@ export default function Navbar() {
       />
 
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-800/70 bg-slate-950/85 backdrop-blur-xl">
-
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
           {/* Brand */}
           <a
             href="#home"
-            onClick={handleNavClick}
+            onClick={() => setMenuOpen(false)}
             className="group flex items-center gap-3"
           >
             <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/5 font-mono text-[10px] text-cyan-400 transition-all group-hover:border-cyan-400/50 group-hover:bg-cyan-400/10">
@@ -99,7 +148,6 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-1 md:flex">
-
             {navItems.map((item, index) => {
               const sectionId = item.href.replace("#", "");
               const isActive = activeSection === sectionId;
@@ -108,6 +156,7 @@ export default function Navbar() {
                 <a
                   key={item.href}
                   href={item.href}
+                  onClick={() => handleNavClick(sectionId)}
                   className={`group relative rounded-lg px-3 py-2 font-mono text-[9px] uppercase tracking-wider transition-colors ${
                     isActive
                       ? "text-cyan-400"
@@ -137,18 +186,15 @@ export default function Navbar() {
                 </a>
               );
             })}
-
           </nav>
 
           {/* Status */}
           <div className="hidden items-center gap-2 lg:flex">
-
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
 
             <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-600">
               Available
             </span>
-
           </div>
 
           {/* Mobile Button */}
@@ -160,7 +206,6 @@ export default function Navbar() {
             className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/50 md:hidden"
           >
             <div className="space-y-1.5">
-
               <span
                 className={`block h-px w-4 bg-slate-400 transition-transform ${
                   menuOpen
@@ -184,28 +229,23 @@ export default function Navbar() {
                     : ""
                 }`}
               />
-
             </div>
           </button>
-
         </div>
 
         {/* Mobile Navigation */}
         {menuOpen && (
           <div className="border-t border-slate-800 bg-slate-950/95 px-6 py-5 md:hidden">
-
             <nav className="space-y-1">
-
               {navItems.map((item, index) => {
                 const sectionId = item.href.replace("#", "");
-                const isActive =
-                  activeSection === sectionId;
+                const isActive = activeSection === sectionId;
 
                 return (
                   <a
                     key={item.href}
                     href={item.href}
-                    onClick={handleNavClick}
+                    onClick={() => handleNavClick(sectionId)}
                     className={`flex items-center gap-4 rounded-lg px-4 py-3 font-mono text-[10px] uppercase tracking-wider transition-colors ${
                       isActive
                         ? "bg-cyan-400/5 text-cyan-400"
@@ -226,22 +266,17 @@ export default function Navbar() {
                   </a>
                 );
               })}
-
             </nav>
 
             <div className="mt-4 flex items-center gap-2 border-t border-slate-800 pt-4">
-
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
 
               <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-600">
                 Available for opportunities
               </span>
-
             </div>
-
           </div>
         )}
-
       </header>
     </>
   );

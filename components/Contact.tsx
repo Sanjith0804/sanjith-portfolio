@@ -280,7 +280,7 @@ export default function Contact() {
                   className="group flex items-center gap-4 rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-4 transition-all duration-300 hover:border-cyan-400/30 hover:bg-cyan-400/5"
                 >
 
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 text-slate-400 transition-colors group-hover:border-cyan-400/20 group-hover:text-cyan-400">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 text-cyan-400 transition-colors group-hover:border-cyan-400/20">
                     <GitHubIcon />
                   </div>
 
@@ -290,7 +290,7 @@ export default function Contact() {
                       ENDPOINT_01
                     </p>
 
-                    <p className="mt-1 text-sm text-slate-300 group-hover:text-white">
+                    <p className="mt-1 text-sm text-slate-300 transition-colors group-hover:text-cyan-400">
                       GitHub
                     </p>
 
@@ -310,7 +310,7 @@ export default function Contact() {
                   className="group flex items-center gap-4 rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-4 transition-all duration-300 hover:border-cyan-400/30 hover:bg-cyan-400/5"
                 >
 
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 text-slate-400 transition-colors group-hover:border-cyan-400/20 group-hover:text-cyan-400">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 text-cyan-400 transition-colors group-hover:border-cyan-400/20">
                     <LinkedInIcon />
                   </div>
 
@@ -320,7 +320,7 @@ export default function Contact() {
                       ENDPOINT_02
                     </p>
 
-                    <p className="mt-1 text-sm text-slate-300 group-hover:text-white">
+                    <p className="mt-1 text-sm text-slate-300 transition-colors group-hover:text-cyan-400">
                       LinkedIn
                     </p>
 

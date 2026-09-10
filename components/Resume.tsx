@@ -181,34 +181,21 @@ export default function Resume() {
                   </p>
 
                   <p className="font-mono text-xs text-slate-300">
-                    SANJITH_R_S_RESUME.PDF
+                    IDENTITY_RECORD // SANJITH R S
                   </p>
                 </div>
 
               </div>
 
-              <div className="flex items-center gap-2">
-
-                {/* Download */}
-                <a
-                  href="/resume/Sanjith_R_S_Resume.pdf"
-                  download="Sanjith_R_S_Resume.pdf"
-                  className="hidden rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 font-mono text-[9px] uppercase tracking-wider text-slate-400 transition-colors hover:border-cyan-400/30 hover:text-cyan-300 sm:block"
-                >
-                  Download ↓
-                </a>
-
-                {/* Close */}
-                <button
-                  type="button"
-                  onClick={() => setResumeOpen(false)}
-                  aria-label="Close resume viewer"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/60 text-slate-400 transition-all hover:border-red-400/30 hover:text-red-300"
-                >
-                  ✕
-                </button>
-
-              </div>
+              {/* Close */}
+              <button
+                type="button"
+                onClick={() => setResumeOpen(false)}
+                aria-label="Close resume viewer"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/60 text-slate-400 transition-all hover:border-red-400/30 hover:text-red-300"
+              >
+                ✕
+              </button>
 
             </div>
 

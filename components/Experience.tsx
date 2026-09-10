@@ -15,6 +15,57 @@ function ExperienceIcon() {
   );
 }
 
+/* U&I Trust logo */
+function UITrustLogo() {
+  return (
+    <div
+      className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-400/30 bg-slate-950"
+      aria-label="U&I Trust"
+    >
+      <img
+        src="/ui-trust-logo.png"
+        alt="U&I Trust"
+        className="h-full w-full object-cover"
+      />
+    </div>
+  );
+}
+
+/* Valtech mark */
+function ValtechLogo() {
+  return (
+    <div
+      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400/30 bg-slate-900/70 text-cyan-400"
+      aria-label="Valtech"
+    >
+      <svg
+        viewBox="0 0 48 48"
+        fill="none"
+        className="h-8 w-8"
+        aria-hidden="true"
+      >
+        <g
+          stroke="currentColor"
+          strokeWidth="3.2"
+          strokeLinecap="square"
+        >
+          <path d="M24 6v36" />
+          <path d="M6 24h36" />
+          <path d="M11.3 11.3l25.4 25.4" />
+          <path d="M36.7 11.3 11.3 36.7" />
+        </g>
+
+        <circle
+          cx="24"
+          cy="24"
+          r="3.5"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  );
+}
+
 export default function Experience() {
   return (
     <section
@@ -146,19 +197,23 @@ export default function Experience() {
                 {/* Organization Header */}
                 <div className="flex flex-col justify-between gap-6 border-b border-slate-800 pb-8 md:flex-row md:items-end">
 
-                  <div>
+                  <div className="flex items-center gap-5">
 
-                    <p className="font-mono text-[9px] tracking-[0.3em] text-slate-600">
-                      ORGANIZATION
-                    </p>
+                    <UITrustLogo />
 
-                    <h3 className="mt-2 text-4xl font-bold tracking-tight text-white md:text-5xl">
-                      U&I TRUST
-                    </h3>
+                    <div>
+                      <p className="font-mono text-[9px] tracking-[0.3em] text-slate-600">
+                        ORGANIZATION
+                      </p>
 
-                    <p className="mt-2 font-mono text-[9px] tracking-[0.2em] text-cyan-400">
-                      COMMUNITY • EDUCATION • LEADERSHIP
-                    </p>
+                      <h3 className="mt-2 text-4xl font-bold tracking-tight text-white md:text-5xl">
+                        U&I TRUST
+                      </h3>
+
+                      <p className="mt-2 font-mono text-[9px] tracking-[0.2em] text-cyan-400">
+                        COMMUNITY • EDUCATION • LEADERSHIP
+                      </p>
+                    </div>
 
                   </div>
 
@@ -399,15 +454,19 @@ export default function Experience() {
 
                   </div>
 
-                  <div className="mt-7">
+                  <div className="mt-7 flex items-center gap-5">
 
-                    <p className="font-mono text-[9px] tracking-[0.3em] text-slate-600">
-                      ORGANIZATION
-                    </p>
+                    <ValtechLogo />
 
-                    <h3 className="mt-2 text-4xl font-bold tracking-tight text-white md:text-5xl">
-                      VALTECH
-                    </h3>
+                    <div>
+                      <p className="font-mono text-[9px] tracking-[0.3em] text-slate-600">
+                        ORGANIZATION
+                      </p>
+
+                      <h3 className="mt-2 text-4xl font-bold tracking-tight text-white md:text-5xl">
+                        VALTECH
+                      </h3>
+                    </div>
 
                   </div>
 

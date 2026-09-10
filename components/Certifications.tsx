@@ -9,6 +9,7 @@ const featuredCredentials = [
     status: "VERIFIED",
     featured: false,
     mark: "IBM",
+    markType: "ibm",
   },
   {
     number: "02",
@@ -20,6 +21,7 @@ const featuredCredentials = [
     status: "VERIFIED",
     featured: false,
     mark: "META",
+    markType: "meta",
   },
   {
     number: "03",
@@ -31,6 +33,7 @@ const featuredCredentials = [
     status: "ELITE",
     featured: true,
     mark: "NPTEL",
+    markType: "nptel",
   },
   {
     number: "04",
@@ -42,6 +45,7 @@ const featuredCredentials = [
     status: "COMPLETED",
     featured: false,
     mark: "D",
+    markType: "deloitte",
   },
   {
     number: "05",
@@ -53,6 +57,7 @@ const featuredCredentials = [
     status: "VERIFIED",
     featured: false,
     mark: "CISCO",
+    markType: "cisco",
   },
 ];
 
@@ -62,18 +67,21 @@ const additionalBadges = [
     title: "Getting Started with Artificial Intelligence",
     category: "AI",
     mark: "IBM",
+    markType: "ibm",
   },
   {
     issuer: "SAP",
     title: "Generative AI Developer",
     category: "Generative AI",
     mark: "SAP",
+    markType: "sap",
   },
   {
     issuer: "CISCO NETWORKING ACADEMY",
     title: "Operating Systems Basics",
     category: "Systems",
     mark: "CISCO",
+    markType: "cisco",
   },
 ];
 
@@ -107,6 +115,262 @@ function CredentialIcon({
   );
 }
 
+function ProviderMark({
+  mark,
+  markType,
+  featured = false,
+}: {
+  mark: string;
+  markType: string;
+  featured?: boolean;
+}) {
+  const baseClass = `
+    flex h-11 w-11 shrink-0 items-center justify-center
+    rounded-xl border font-mono font-semibold
+    transition-all duration-300
+  `;
+
+  /*
+   * META
+   *
+   * Filled SVG recreation based on the actual Meta
+   * infinity mark. Uses currentColor so it naturally
+   * matches the portfolio's cyan visual system.
+   */
+  if (markType === "meta") {
+    return (
+      <div
+        className={`${baseClass} ${
+          featured
+            ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
+            : "border-slate-800 bg-slate-900 text-cyan-400 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+        }`}
+        aria-label="Meta"
+      >
+        <svg
+          viewBox="0 0 610 421"
+          fill="currentColor"
+          className="h-[22px] w-[31px]"
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="
+              M47 120
+              L17 216
+              L15 306
+              L38 367
+              L79 400
+              L140 406
+              L184 386
+              L241 317
+              L304 208
+              L405 361
+              L450 398
+              L485 407
+              L530 402
+              L568 373
+              L586 342
+              L594 311
+              L596 248
+              L578 153
+              L558 109
+              L530 68
+              L497 39
+              L465 23
+              L417 19
+              L391 27
+              L349 55
+              L314 97
+              L274 55
+              L228 25
+              L199 18
+              L148 23
+              L96 54
+              Z
+
+              M198 87
+              L230 106
+              L272 158
+              L164 319
+              L143 337
+              L111 341
+              L90 325
+              L78 293
+              L78 248
+              L92 184
+              L116 132
+              L146 96
+              L167 86
+              Z
+
+              M405 76
+              L435 71
+              L465 83
+              L501 120
+              L517 153
+              L535 217
+              L539 277
+              L531 322
+              L511 343
+              L484 343
+              L466 330
+              L416 260
+              L345 141
+              L371 104
+              Z
+            "
+          />
+        </svg>
+      </div>
+    );
+  }
+
+  /*
+   * DELOITTE
+   */
+  if (markType === "deloitte") {
+    return (
+      <div
+        className={`${baseClass} ${
+          featured
+            ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
+            : "border-slate-800 bg-slate-900 text-cyan-400 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+        }`}
+        aria-label="Deloitte"
+      >
+        <div className="flex items-end">
+          <span className="text-lg font-bold leading-none">
+            D
+          </span>
+
+          <span className="mb-0.5 ml-0.5 h-1.5 w-1.5 rounded-full bg-emerald-400" />
+        </div>
+      </div>
+    );
+  }
+
+  /*
+   * NPTEL
+   *
+   * Uses the dedicated NPTEL image asset so the
+   * complete emblem and wordmark are preserved.
+   */
+  if (markType === "nptel") {
+    return (
+      <div
+        className={`${baseClass} ${
+          featured
+            ? "h-12 w-12 border-cyan-400/40 bg-cyan-400/10 shadow-[0_0_20px_rgba(34,211,238,0.08)]"
+            : "border-slate-800 bg-slate-900 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+        }`}
+        aria-label="NPTEL"
+      >
+        <img
+          src="/nptel-logo.png"
+          alt="NPTEL"
+          className="h-10 w-10 object-contain"
+        />
+      </div>
+    );
+  }
+
+  /*
+   * CISCO
+   *
+   * Cisco-style nine-bar bridge/signal mark with
+   * the CISCO wordmark underneath.
+   */
+  if (markType === "cisco") {
+    return (
+      <div
+        className={`${baseClass} ${
+          featured
+            ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
+            : "border-slate-800 bg-slate-900 text-cyan-400 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+        }`}
+        aria-label="Cisco"
+      >
+        <div className="flex flex-col items-center justify-center">
+          <svg
+            viewBox="0 0 46 34"
+            className="h-[27px] w-[34px]"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            {/* Cisco signal bars */}
+            <rect x="2" y="10" width="2.8" height="6" rx="1.4" />
+            <rect x="7.2" y="7" width="2.8" height="9" rx="1.4" />
+            <rect x="12.4" y="3" width="2.8" height="13" rx="1.4" />
+            <rect x="17.6" y="7" width="2.8" height="9" rx="1.4" />
+            <rect x="22.8" y="10" width="2.8" height="6" rx="1.4" />
+            <rect x="28" y="7" width="2.8" height="9" rx="1.4" />
+            <rect x="33.2" y="3" width="2.8" height="13" rx="1.4" />
+            <rect x="38.4" y="7" width="2.8" height="9" rx="1.4" />
+            <rect x="43.2" y="10" width="2.8" height="6" rx="1.4" />
+
+            {/* Cisco wordmark */}
+            <text
+              x="23"
+              y="27"
+              textAnchor="middle"
+              fontFamily="Arial, Helvetica, sans-serif"
+              fontSize="7"
+              fontWeight="700"
+              letterSpacing="1.8"
+            >
+              CISCO
+            </text>
+          </svg>
+        </div>
+      </div>
+    );
+  }
+
+  /*
+   * SAP
+   */
+  if (markType === "sap") {
+    return (
+      <div
+        className={`${baseClass} ${
+          featured
+            ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
+            : "border-slate-800 bg-slate-900 text-cyan-400 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+        }`}
+        aria-label="SAP"
+      >
+        <div className="text-center">
+          <div className="text-[11px] font-bold tracking-[0.16em]">
+            SAP
+          </div>
+
+          <div className="mx-auto mt-1 h-px w-5 bg-current opacity-40" />
+        </div>
+      </div>
+    );
+  }
+
+  /*
+   * IBM
+   */
+  return (
+    <div
+      className={`${baseClass} ${
+        featured
+          ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
+          : "border-slate-800 bg-slate-900 text-cyan-400 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+      }`}
+      aria-label={mark}
+    >
+      <span className="text-[10px] font-bold tracking-[0.12em]">
+        {mark}
+      </span>
+    </div>
+  );
+}
+
 export default function Certifications() {
   return (
     <section
@@ -115,10 +379,7 @@ export default function Certifications() {
     >
       <div className="mx-auto w-full max-w-6xl">
 
-        {/* ========================================= */}
-        {/* HEADER */}
-        {/* ========================================= */}
-
+        {/* Section Header */}
         <div className="mb-16 flex items-center gap-4">
           <span className="font-mono text-xs tracking-[0.3em] text-cyan-400">
             07 // CREDENTIALS
@@ -131,10 +392,10 @@ export default function Certifications() {
           </span>
         </div>
 
+        {/* Heading */}
         <div className="mb-14 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
 
           <div>
-
             <div className="flex items-center gap-3">
 
               <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/5 text-cyan-400">
@@ -157,7 +418,6 @@ export default function Certifications() {
               supporting my work across cybersecurity, software
               development, and artificial intelligence.
             </p>
-
           </div>
 
           {/* Credential summary */}
@@ -198,15 +458,10 @@ export default function Certifications() {
               </div>
 
             </div>
-
           </div>
-
         </div>
 
-        {/* ========================================= */}
-        {/* CERTIFICATION GRID */}
-        {/* ========================================= */}
-
+        {/* Certification Grid */}
         <div className="grid gap-5 md:grid-cols-2">
 
           {featuredCredentials.map((credential) => (
@@ -227,16 +482,11 @@ export default function Certifications() {
 
                 <div className="flex items-center gap-3">
 
-                  {/* Provider mark */}
-                  <div
-                    className={`flex h-11 w-11 items-center justify-center rounded-xl border font-mono text-[8px] font-semibold tracking-wider transition-all duration-300 ${
-                      credential.featured
-                        ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
-                        : "border-slate-800 bg-slate-900 text-cyan-400 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
-                    }`}
-                  >
-                    {credential.mark}
-                  </div>
+                  <ProviderMark
+                    mark={credential.mark}
+                    markType={credential.markType}
+                    featured={credential.featured}
+                  />
 
                   <div>
 
@@ -249,23 +499,23 @@ export default function Certifications() {
                     </p>
 
                   </div>
-
                 </div>
 
                 <span className="font-mono text-[9px] text-slate-700">
                   {credential.number}
                 </span>
-
               </div>
 
               {/* Credential type */}
               <div className="relative mt-7">
 
                 <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/10 bg-cyan-400/5 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.15em] text-cyan-400">
-                  <span className="h-1 w-1 rounded-full bg-cyan-400" />
-                  {credential.type}
-                </span>
 
+                  <span className="h-1 w-1 rounded-full bg-cyan-400" />
+
+                  {credential.type}
+
+                </span>
               </div>
 
               {/* Title */}
@@ -299,16 +549,11 @@ export default function Certifications() {
                 </span>
 
               </div>
-
             </article>
           ))}
-
         </div>
 
-        {/* ========================================= */}
-        {/* BADGES */}
-        {/* ========================================= */}
-
+        {/* Badges */}
         <div className="mt-20">
 
           <div className="mb-10 flex items-center gap-4">
@@ -329,7 +574,6 @@ export default function Certifications() {
               </h2>
 
             </div>
-
           </div>
 
           <p className="mb-10 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
@@ -337,7 +581,7 @@ export default function Certifications() {
             learning platforms and industry programs.
           </p>
 
-          {/* Badge grid */}
+          {/* Badge Grid */}
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
             {additionalBadges.map((badge) => (
@@ -346,10 +590,10 @@ export default function Certifications() {
                 className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/25 hover:bg-slate-900/60"
               >
 
-                {/* Provider mark */}
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 font-mono text-[8px] font-semibold tracking-wider text-cyan-400 transition-all duration-300 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5">
-                  {badge.mark}
-                </div>
+                <ProviderMark
+                  mark={badge.mark}
+                  markType={badge.markType}
+                />
 
                 <p className="mt-7 font-mono text-[9px] uppercase tracking-[0.18em] text-slate-600">
                   {badge.category}
@@ -370,17 +614,13 @@ export default function Certifications() {
                   </span>
 
                 </div>
-
               </article>
             ))}
 
           </div>
         </div>
 
-        {/* ========================================= */}
-        {/* FOOTER */}
-        {/* ========================================= */}
-
+        {/* Footer Strip */}
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-y border-slate-800 py-4 font-mono text-[9px] uppercase tracking-[0.2em] text-slate-700">
 
           <span>
