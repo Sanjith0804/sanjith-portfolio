@@ -348,7 +348,7 @@ function ProviderMark({
         <img
           src="/sap-logo.png"
           alt="SAP"
-          className="h-8 w-8 object-contain"
+          className="h-9 w-9 object-contain"
         />
       </div>
     );
