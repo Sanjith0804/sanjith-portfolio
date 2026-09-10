@@ -330,24 +330,26 @@ function ProviderMark({
 
   /*
    * SAP
+   *
+   * Uses the dedicated SAP logo asset with the
+   * original SAP badge shape adapted to the
+   * portfolio's cyan/blue visual theme.
    */
   if (markType === "sap") {
     return (
       <div
         className={`${baseClass} ${
           featured
-            ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
-            : "border-slate-800 bg-slate-900 text-cyan-400 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+            ? "border-cyan-400/30 bg-cyan-400/10"
+            : "border-slate-800 bg-slate-900 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
         }`}
         aria-label="SAP"
       >
-        <div className="text-center">
-          <div className="text-[11px] font-bold tracking-[0.16em]">
-            SAP
-          </div>
-
-          <div className="mx-auto mt-1 h-px w-5 bg-current opacity-40" />
-        </div>
+        <img
+          src="/sap-logo.png"
+          alt="SAP"
+          className="h-8 w-8 object-contain"
+        />
       </div>
     );
   }
