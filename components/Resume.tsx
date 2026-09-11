@@ -214,7 +214,7 @@ export default function Resume() {
             <div className="flex shrink-0 items-center justify-between border-t border-slate-800 bg-slate-950 px-4 py-2 font-mono text-[8px] uppercase tracking-[0.18em] text-slate-700 sm:px-6">
 
               <span>
-                PDF // VIEWER
+                PDF_DOCUMENT // VERIFIED
               </span>
 
               <span className="text-emerald-500/70">
