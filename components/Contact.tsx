@@ -90,12 +90,9 @@ export default function Contact() {
       </div>
 
       <div className="relative mx-auto max-w-6xl">
-
         {/* HEADER */}
         <div className="mb-16">
-
           <div className="flex items-center gap-4">
-
             <span className="font-mono text-xs tracking-[0.3em] text-cyan-400">
               09 // COMMUNICATION
             </span>
@@ -105,11 +102,9 @@ export default function Contact() {
             <span className="hidden font-mono text-[9px] tracking-[0.2em] text-slate-700 sm:block">
               SECURE_CHANNEL
             </span>
-
           </div>
 
           <div className="mt-10 max-w-3xl">
-
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-slate-600">
               OPEN CONNECTION
             </p>
@@ -124,19 +119,14 @@ export default function Contact() {
               or building something meaningful together? Feel free to
               reach out.
             </p>
-
           </div>
-
         </div>
 
         {/* CONTACT TERMINAL */}
         <div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 backdrop-blur-xl">
-
           {/* Terminal Header */}
           <div className="flex items-center justify-between border-b border-slate-800 px-6 py-4">
-
             <div className="flex items-center gap-3">
-
               <div className="flex gap-1.5">
                 <span className="h-2 w-2 rounded-full bg-slate-700" />
                 <span className="h-2 w-2 rounded-full bg-slate-700" />
@@ -146,40 +136,33 @@ export default function Contact() {
               <span className="font-mono text-[9px] tracking-[0.2em] text-slate-600">
                 CONTACT_PROTOCOL
               </span>
-
             </div>
 
             <span className="font-mono text-[9px] text-emerald-400">
               ● ONLINE
             </span>
-
           </div>
 
           {/* Terminal Body */}
           <div className="grid md:grid-cols-[1fr_280px]">
-
             {/* Main Contact */}
             <div className="p-8 md:p-12">
-
               <p className="font-mono text-[9px] tracking-[0.25em] text-slate-600">
                 PRIMARY_CHANNEL
               </p>
 
               {/* Contact Methods */}
               <div className="mt-8 space-y-5">
-
                 {/* Email */}
                 <a
                   href="mailto:sanjithreganti@gmail.com"
                   className="group flex items-center gap-4"
                 >
-
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/70 text-slate-400 transition-colors group-hover:border-cyan-400/30 group-hover:text-cyan-400">
                     <MailIcon />
                   </div>
 
                   <div className="flex min-w-0 flex-1 items-center gap-4">
-
                     <span className="w-14 shrink-0 font-mono text-[9px] uppercase tracking-[0.18em] text-slate-600">
                       EMAIL
                     </span>
@@ -187,9 +170,7 @@ export default function Contact() {
                     <span className="truncate text-sm font-medium text-slate-300 transition-colors group-hover:text-cyan-400 sm:text-base">
                       sanjithreganti@gmail.com
                     </span>
-
                   </div>
-
                 </a>
 
                 {/* Phone */}
@@ -197,13 +178,11 @@ export default function Contact() {
                   href="tel:+919663833633"
                   className="group flex items-center gap-4"
                 >
-
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/70 text-slate-400 transition-colors group-hover:border-cyan-400/30 group-hover:text-cyan-400">
                     <PhoneIcon />
                   </div>
 
                   <div className="flex min-w-0 flex-1 items-center gap-4">
-
                     <span className="w-14 shrink-0 font-mono text-[9px] uppercase tracking-[0.18em] text-slate-600">
                       PHONE
                     </span>
@@ -211,20 +190,16 @@ export default function Contact() {
                     <span className="text-sm font-medium text-slate-300 transition-colors group-hover:text-cyan-400 sm:text-base">
                       +91 96638 33633
                     </span>
-
                   </div>
-
                 </a>
 
                 {/* Location */}
                 <div className="flex items-center gap-4">
-
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/70 text-slate-400">
                     <LocationIcon />
                   </div>
 
                   <div className="flex min-w-0 flex-1 items-center gap-4">
-
                     <span className="w-14 shrink-0 font-mono text-[9px] uppercase tracking-[0.18em] text-slate-600">
                       LOCATION
                     </span>
@@ -232,11 +207,8 @@ export default function Contact() {
                     <span className="text-sm font-medium text-slate-300 sm:text-base">
                       Bengaluru, Karnataka, India
                     </span>
-
                   </div>
-
                 </div>
-
               </div>
 
               {/* Divider */}
@@ -244,34 +216,27 @@ export default function Contact() {
 
               {/* Availability */}
               <div className="mt-8">
-
                 <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
                   AVAILABILITY
                 </p>
 
                 <div className="mt-3 flex items-center gap-3">
-
                   <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.7)]" />
 
                   <p className="text-base font-medium text-slate-300 sm:text-lg">
                     Open to internships &amp; opportunities
                   </p>
-
                 </div>
-
               </div>
-
             </div>
 
             {/* Network Endpoints */}
             <div className="border-t border-slate-800 bg-slate-900/20 p-8 md:border-l md:border-t-0">
-
               <p className="font-mono text-[9px] tracking-[0.25em] text-slate-600">
                 NETWORK_ENDPOINTS
               </p>
 
               <div className="mt-6 space-y-3">
-
                 {/* GitHub */}
                 <a
                   href="https://github.com/Sanjith0804"
@@ -279,13 +244,11 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-4 transition-all duration-300 hover:border-cyan-400/30 hover:bg-cyan-400/5"
                 >
-
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 text-cyan-400 transition-colors group-hover:border-cyan-400/20">
                     <GitHubIcon />
                   </div>
 
                   <div className="min-w-0 flex-1">
-
                     <p className="font-mono text-[9px] text-slate-700">
                       ENDPOINT_01
                     </p>
@@ -294,12 +257,14 @@ export default function Contact() {
                       GitHub
                     </p>
 
+                    <p className="mt-1 truncate font-mono text-[8px] tracking-[0.08em] text-slate-600 transition-colors group-hover:text-slate-500">
+                      github.com/Sanjith0804
+                    </p>
                   </div>
 
                   <span className="text-slate-600 transition-transform group-hover:translate-x-1 group-hover:text-cyan-400">
                     ↗
                   </span>
-
                 </a>
 
                 {/* LinkedIn */}
@@ -309,13 +274,11 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-4 transition-all duration-300 hover:border-cyan-400/30 hover:bg-cyan-400/5"
                 >
-
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 text-cyan-400 transition-colors group-hover:border-cyan-400/20">
                     <LinkedInIcon />
                   </div>
 
                   <div className="min-w-0 flex-1">
-
                     <p className="font-mono text-[9px] text-slate-700">
                       ENDPOINT_02
                     </p>
@@ -324,25 +287,22 @@ export default function Contact() {
                       LinkedIn
                     </p>
 
+                    <p className="mt-1 truncate font-mono text-[8px] tracking-[0.08em] text-slate-600 transition-colors group-hover:text-slate-500">
+                      linkedin.com/in/sanjith-rs
+                    </p>
                   </div>
 
                   <span className="text-slate-600 transition-transform group-hover:translate-x-1 group-hover:text-cyan-400">
                     ↗
                   </span>
-
                 </a>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
 
         {/* Bottom Status */}
         <div className="mt-6 flex flex-wrap items-center justify-between gap-4 font-mono text-[8px] uppercase tracking-[0.2em] text-slate-700">
-
           <span>
             CHANNEL: OPEN
           </span>
@@ -354,9 +314,7 @@ export default function Contact() {
           <span className="text-emerald-500/70">
             CONNECTION: STABLE
           </span>
-
         </div>
-
       </div>
     </section>
   );
