@@ -202,6 +202,7 @@ export default function Experience() {
                     <UITrustLogo />
 
                     <div>
+
                       <p className="font-mono text-[9px] tracking-[0.3em] text-slate-600">
                         ORGANIZATION
                       </p>
@@ -213,6 +214,7 @@ export default function Experience() {
                       <p className="mt-2 font-mono text-[9px] tracking-[0.2em] text-cyan-400">
                         COMMUNITY • EDUCATION • LEADERSHIP
                       </p>
+
                     </div>
 
                   </div>
@@ -326,7 +328,7 @@ export default function Experience() {
 
                   </div>
 
-                  <div className="rounded-xl border border-cyan-400/20 bg-cyan-400/[0.025] p-6 transition-all duration-300 hover:border-cyan-400/30">
+                  <div className="rounded-xl border border-cyan-400/25 bg-cyan-400/[0.035] p-6 transition-all duration-300 hover:border-cyan-400/30">
 
                     <div className="flex flex-wrap items-center justify-between gap-3">
 
@@ -334,7 +336,7 @@ export default function Experience() {
                         ROLE_02
                       </span>
 
-                      <span className="font-mono text-[9px] text-cyan-400">
+                      <span className="font-mono text-[9px] text-cyan-400 [text-shadow:0_0_8px_rgba(34,211,238,0.35)]">
                         ● CURRENT
                       </span>
 
@@ -459,6 +461,7 @@ export default function Experience() {
                     <ValtechLogo />
 
                     <div>
+
                       <p className="font-mono text-[9px] tracking-[0.3em] text-slate-600">
                         ORGANIZATION
                       </p>
@@ -466,6 +469,7 @@ export default function Experience() {
                       <h3 className="mt-2 text-4xl font-bold tracking-tight text-white md:text-5xl">
                         VALTECH
                       </h3>
+
                     </div>
 
                   </div>
