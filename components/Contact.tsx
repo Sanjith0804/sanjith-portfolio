@@ -194,8 +194,8 @@ export default function Contact() {
                 </a>
 
                 {/* Location */}
-                <div className="flex items-center gap-4">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/70 text-slate-400">
+                <div className="group flex items-center gap-4">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/70 text-slate-400 transition-colors group-hover:border-cyan-400/30 group-hover:text-cyan-400">
                     <LocationIcon />
                   </div>
 
@@ -204,7 +204,7 @@ export default function Contact() {
                       LOCATION
                     </span>
 
-                    <span className="text-sm font-medium text-slate-300 sm:text-base">
+                    <span className="text-sm font-medium text-slate-300 transition-colors group-hover:text-cyan-400 sm:text-base">
                       Bengaluru, Karnataka, India
                     </span>
                   </div>
