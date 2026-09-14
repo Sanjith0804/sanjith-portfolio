@@ -373,7 +373,7 @@ function ProviderMark({
         <img
           src="/ibm-logo.png"
           alt="IBM"
-          className="h-7 w-7 object-contain"
+          className="h-9 w-9 object-contain"
         />
       </div>
     );
