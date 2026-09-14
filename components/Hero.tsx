@@ -82,12 +82,10 @@ export default function Hero() {
 
               {/* Resume */}
               <a
-                href="/resume/Sanjith_R_S_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#resume"
                 className="group inline-flex items-center gap-3 rounded-xl border border-slate-700 bg-slate-900/50 px-6 py-3.5 text-sm font-semibold text-slate-200 transition-all duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/5 hover:text-cyan-300"
               >
-                View Resume
+                Resume Record
 
                 <span className="text-slate-500 transition-transform duration-300 group-hover:translate-y-[-2px] group-hover:text-cyan-400">
                   ↗
