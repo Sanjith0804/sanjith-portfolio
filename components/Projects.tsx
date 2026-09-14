@@ -13,6 +13,7 @@ type Project = {
   systemStatus: string;
   details: string;
   icon: "shield" | "desk" | "sos" | "url" | "surveillance";
+  github?: string;
 };
 
 function ProjectIcon({ type }: { type: Project["icon"] }) {
@@ -148,6 +149,7 @@ export default function Projects() {
       details:
         "A discreet emergency communication and safety system designed to provide users with a simple mechanism to trigger an SOS response when conventional communication may not be practical.",
       icon: "sos",
+      github: "https://github.com/Sanjith0804/Silent-SOS",
     },
     {
       number: "CASE_004",
@@ -239,7 +241,6 @@ export default function Projects() {
                 key={project.number}
                 className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/60 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-slate-900/60"
               >
-
                 {/* Hover accent */}
                 <div className="absolute left-0 top-0 h-px w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full" />
 
@@ -250,7 +251,6 @@ export default function Projects() {
 
                   {/* Metadata */}
                   <div className="flex flex-row justify-between md:flex-col">
-
                     <div>
 
                       {/* Project identity */}
@@ -295,7 +295,6 @@ export default function Projects() {
                       </p>
 
                     </div>
-
                   </div>
 
                   {/* Main Content */}
@@ -358,10 +357,18 @@ export default function Projects() {
                       </button>
 
                       <a
-                        href="#"
-                        onClick={(event) =>
-                          event.preventDefault()
+                        href={project.github ?? "#"}
+                        target={project.github ? "_blank" : undefined}
+                        rel={
+                          project.github
+                            ? "noopener noreferrer"
+                            : undefined
                         }
+                        onClick={(event) => {
+                          if (!project.github) {
+                            event.preventDefault();
+                          }
+                        }}
                         aria-label={`GitHub repository for ${project.title}`}
                         className="rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider text-slate-400 transition-all hover:border-slate-600 hover:text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400/30"
                       >
