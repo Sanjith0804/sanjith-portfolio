@@ -123,7 +123,7 @@ export default function Resume() {
 
                 {/* Download */}
                 <a
-                  href="/resume/Sanjith_R_S_Resume.pdf"
+                  href="/resume/Sanjith%20R%20S-Resume.pdf"
                   download="Sanjith R S - Resume.pdf"
                   className="group inline-flex items-center gap-3 rounded-xl border border-slate-700 bg-slate-900/50 px-5 py-3 text-sm font-semibold text-slate-300 transition-all duration-300 hover:border-slate-500 hover:bg-slate-800/70 hover:text-white"
                 >
@@ -203,7 +203,7 @@ export default function Resume() {
             <div className="min-h-0 flex-1 bg-slate-900">
 
               <iframe
-                src="/resume/Sanjith_R_S_Resume.pdf"
+                src="/resume/Sanjith%20R%20S-Resume.pdf"
                 title="Sanjith R S Resume"
                 className="h-full w-full border-0"
               />
