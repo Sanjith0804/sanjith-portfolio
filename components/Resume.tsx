@@ -67,7 +67,7 @@ export default function Resume() {
                   </p>
 
                   <h2 className="mt-2 break-words text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                    Sanjith_R_S_Resume.pdf
+                    Sanjith R S — Resume
                   </h2>
 
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-400">
@@ -124,7 +124,7 @@ export default function Resume() {
                 {/* Download */}
                 <a
                   href="/resume/Sanjith_R_S_Resume.pdf"
-                  download="Sanjith_R_S_Resume.pdf"
+                  download="Sanjith R S - Resume.pdf"
                   className="group inline-flex items-center gap-3 rounded-xl border border-slate-700 bg-slate-900/50 px-5 py-3 text-sm font-semibold text-slate-300 transition-all duration-300 hover:border-slate-500 hover:bg-slate-800/70 hover:text-white"
                 >
                   Download
