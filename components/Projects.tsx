@@ -130,6 +130,7 @@ export default function Projects() {
       details:
         "A centralized hot desk management platform designed to simplify desk booking, resource management, and workplace compliance through a web-based system.",
       icon: "desk",
+      github: "https://github.com/Sanjith0804/deskhop",
     },
     {
       number: "CASE_003",
@@ -251,6 +252,7 @@ export default function Projects() {
 
                   {/* Metadata */}
                   <div className="flex flex-row justify-between md:flex-col">
+
                     <div>
 
                       {/* Project identity */}
@@ -295,6 +297,7 @@ export default function Projects() {
                       </p>
 
                     </div>
+
                   </div>
 
                   {/* Main Content */}
