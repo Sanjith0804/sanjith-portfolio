@@ -12,6 +12,7 @@ type Project = {
   classification: string;
   systemStatus: string;
   details: string;
+  caseSummary?: string;
   icon: "shield" | "desk" | "sos" | "url" | "surveillance";
   github?: string;
 };
@@ -109,8 +110,11 @@ export default function Projects() {
       systemStatus: "IN PROGRESS",
       details:
         "A major cybersecurity initiative focused on developing an adaptive security system capable of responding intelligently to evolving threats and changing security scenarios.",
+      caseSummary:
+        "Modern cyber threats continuously evolve, making it difficult for traditional security approaches to respond effectively to changing attack patterns and environments. This project focuses on developing an adaptive cybersecurity system that can analyze changing security conditions and intelligently respond to evolving threats, improving the system's ability to detect and handle potential security risks.",
       icon: "shield",
     },
+
     {
       number: "CASE_002",
       status: "SOFTWARE SYSTEM",
@@ -132,6 +136,7 @@ export default function Projects() {
       icon: "desk",
       github: "https://github.com/Sanjith0804/deskhop",
     },
+
     {
       number: "CASE_003",
       status: "SECURITY SYSTEM",
@@ -152,6 +157,7 @@ export default function Projects() {
       icon: "sos",
       github: "https://github.com/Sanjith0804/Silent-SOS",
     },
+
     {
       number: "CASE_004",
       status: "CYBERSECURITY",
@@ -172,6 +178,7 @@ export default function Projects() {
         "A web-based security application that analyzes URLs and evaluates potential phishing or malicious activity using heuristic risk scoring techniques.",
       icon: "url",
     },
+
     {
       number: "CASE_005",
       status: "EMBEDDED SECURITY",
@@ -252,7 +259,6 @@ export default function Projects() {
 
                   {/* Metadata */}
                   <div className="flex flex-row justify-between md:flex-col">
-
                     <div>
 
                       {/* Project identity */}
@@ -297,7 +303,6 @@ export default function Projects() {
                       </p>
 
                     </div>
-
                   </div>
 
                   {/* Main Content */}
@@ -472,17 +477,32 @@ export default function Projects() {
                 {selectedProject.title}
               </h2>
 
-              <div className="mt-8">
+              {/* Case Summary — added for CASE_001 */}
+              {selectedProject.caseSummary ? (
+                <div className="mt-8">
 
-                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
-                  OVERVIEW
-                </p>
+                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
+                    CASE SUMMARY
+                  </p>
 
-                <p className="mt-3 text-sm leading-8 text-slate-400 sm:text-base">
-                  {selectedProject.details}
-                </p>
+                  <p className="mt-3 text-sm leading-8 text-slate-400 sm:text-base">
+                    {selectedProject.caseSummary}
+                  </p>
 
-              </div>
+                </div>
+              ) : (
+                <div className="mt-8">
+
+                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
+                    OVERVIEW
+                  </p>
+
+                  <p className="mt-3 text-sm leading-8 text-slate-400 sm:text-base">
+                    {selectedProject.details}
+                  </p>
+
+                </div>
+              )}
 
               {/* Technologies */}
               <div className="mt-8">
