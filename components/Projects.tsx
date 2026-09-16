@@ -203,6 +203,8 @@ export default function Projects() {
       systemStatus: "ACTIVE",
       details:
         "An embedded security system combining hardware components with real-time surveillance and detection capabilities for security-focused applications.",
+      caseSummary:
+        "Security monitoring often requires continuous observation and timely detection of activity, which can be difficult to achieve through manual monitoring alone. This project addresses the problem by integrating an ESP32, sensors, and surveillance components to create a real-time detection system capable of monitoring and identifying security-related activity.",
       icon: "surveillance",
     },
   ];
