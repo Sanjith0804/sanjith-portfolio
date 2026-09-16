@@ -133,6 +133,8 @@ export default function Projects() {
       systemStatus: "OPERATIONAL",
       details:
         "A centralized hot desk management platform designed to simplify desk booking, resource management, and workplace compliance through a web-based system.",
+      caseSummary:
+        "Managing shared workspaces can make it difficult to keep track of desk availability, bookings, resources, and workplace compliance in one place. DeskHop addresses this by providing a centralized web-based platform where users can manage desk bookings and resources while enabling administrative control over workspace usage and compliance.",
       icon: "desk",
       github: "https://github.com/Sanjith0804/deskhop",
     },
@@ -477,32 +479,21 @@ export default function Projects() {
                 {selectedProject.title}
               </h2>
 
-              {/* Case Summary — added for CASE_001 */}
-              {selectedProject.caseSummary ? (
-                <div className="mt-8">
+              {/* Case Summary */}
+              <div className="mt-8">
 
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
-                    CASE SUMMARY
-                  </p>
+                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
+                  {selectedProject.caseSummary
+                    ? "CASE SUMMARY"
+                    : "OVERVIEW"}
+                </p>
 
-                  <p className="mt-3 text-sm leading-8 text-slate-400 sm:text-base">
-                    {selectedProject.caseSummary}
-                  </p>
+                <p className="mt-3 text-sm leading-8 text-slate-400 sm:text-base">
+                  {selectedProject.caseSummary ??
+                    selectedProject.details}
+                </p>
 
-                </div>
-              ) : (
-                <div className="mt-8">
-
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
-                    OVERVIEW
-                  </p>
-
-                  <p className="mt-3 text-sm leading-8 text-slate-400 sm:text-base">
-                    {selectedProject.details}
-                  </p>
-
-                </div>
-              )}
+              </div>
 
               {/* Technologies */}
               <div className="mt-8">
