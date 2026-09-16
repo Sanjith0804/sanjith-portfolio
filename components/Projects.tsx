@@ -180,6 +180,8 @@ export default function Projects() {
       systemStatus: "OPERATIONAL",
       details:
         "A web-based security application that analyzes URLs and evaluates potential phishing or malicious activity using heuristic risk scoring techniques.",
+      caseSummary:
+        "Phishing and malicious URLs can often appear similar to legitimate links, making it difficult for users to identify potentially dangerous websites before accessing them. URL Risk Analyzer addresses this by analyzing submitted URLs using heuristic risk analysis and generating a risk score that helps indicate whether a URL may present a potential security threat.",
       icon: "url",
     },
 
