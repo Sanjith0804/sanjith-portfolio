@@ -156,6 +156,8 @@ export default function Projects() {
       systemStatus: "OPERATIONAL",
       details:
         "A discreet emergency communication and safety system designed to provide users with a simple mechanism to trigger an SOS response when conventional communication may not be practical.",
+      caseSummary:
+        "During emergency situations, conventional communication methods may not always be practical, especially when a person needs to request help discreetly. Silent SOS addresses this problem by providing a discreet mechanism for triggering an SOS response, allowing users to communicate an emergency without relying on conventional communication methods.",
       icon: "sos",
       github: "https://github.com/Sanjith0804/Silent-SOS",
     },
