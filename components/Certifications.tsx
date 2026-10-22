@@ -29,7 +29,7 @@ const featuredCredentials = [
     title: "Cryptography & Network Security",
     type: "Elite Certification",
     category: "Cybersecurity",
-    date: "CERTIFIED",
+    date: "JAN–APR 2026",
     status: "ELITE",
     featured: true,
     mark: "NPTEL",
@@ -54,7 +54,7 @@ const featuredCredentials = [
     type: "Certificate of Completion",
     category: "Cybersecurity",
     date: "MAR 2026",
-    status: "COMPLETED",
+    status: "VERIFIED",
     featured: false,
     mark: "D",
     markType: "deloitte",
@@ -572,10 +572,10 @@ export default function Certifications() {
 
                   <p
                     className={`mt-1 font-mono text-[9px] uppercase tracking-[0.12em] ${
-                      credential.status === "ELITE"
-                        ? "text-cyan-400"
-                        : "text-emerald-400"
-                    }`}
+  credential.status === "ELITE"
+    ? "text-emerald-400"
+    : "text-emerald-400"
+}`}
                   >
                     ● {credential.status}
                   </p>
