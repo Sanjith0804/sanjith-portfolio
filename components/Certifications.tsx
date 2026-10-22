@@ -35,8 +35,20 @@ const featuredCredentials = [
     mark: "NPTEL",
     markType: "nptel",
   },
-  {
+    {
     number: "04",
+    issuer: "NPTEL × IIT KHARAGPUR",
+    title: "Introduction to Machine Learning",
+    type: "Elite Certification",
+    category: "Artificial Intelligence",
+    date: "JUL–SEP 2026",
+    status: "ELITE",
+    featured: false,
+    mark: "NPTEL",
+    markType: "nptel",
+  },
+  {
+    number: "05",
     issuer: "DELOITTE × FORAGE",
     title: "Cyber Job Simulation",
     type: "Certificate of Completion",
@@ -48,7 +60,7 @@ const featuredCredentials = [
     markType: "deloitte",
   },
   {
-    number: "05",
+    number: "06",
     issuer: "CISCO NETWORKING ACADEMY",
     title: "Introduction to Cybersecurity",
     type: "Verified Certificate",
