@@ -25,7 +25,7 @@ const featuredCredentials = [
   },
   {
     number: "03",
-    issuer: "NPTEL",
+    issuer: "NPTEL ",
     title: "Cryptography & Network Security",
     type: "Elite Certification",
     category: "Cybersecurity",
@@ -272,17 +272,17 @@ function ProviderMark({
   if (markType === "nptel") {
     return (
       <div
-        className={`${baseClass} ${
-          featured
-            ? "h-12 w-12 border-cyan-400/40 bg-cyan-400/10 shadow-[0_0_20px_rgba(34,211,238,0.08)]"
-            : "border-slate-800 bg-slate-900 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
-        }`}
+        className={`${baseClass} h-12 w-12 ${
+  featured
+    ? "border-cyan-400/40 bg-cyan-400/10 shadow-[0_0_20px_rgba(34,211,238,0.08)]"
+    : "border-slate-800 bg-slate-900 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/5"
+}`}
         aria-label="NPTEL"
       >
         <img
           src="/nptel-logo.png"
           alt="NPTEL"
-          className="h-10 w-10 object-contain"
+          className="h-9 w-9 object-contain"
         />
       </div>
     );
