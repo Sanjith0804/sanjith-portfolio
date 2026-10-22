@@ -25,7 +25,7 @@ const featuredCredentials = [
   },
   {
     number: "03",
-    issuer: "NPTEL ",
+    issuer: "NPTEL × IIT KHARAGPUR",
     title: "Cryptography & Network Security",
     type: "Elite Certification",
     category: "Cybersecurity",
