@@ -482,7 +482,7 @@ export default function Certifications() {
                 </p>
 
                 <p className="mt-1 text-2xl text-white">
-                  05
+                  06
                 </p>
               </div>
 
