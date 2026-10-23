@@ -102,6 +102,13 @@ const additionalBadges = [
     mark: "CISCO",
     markType: "cisco",
   },
+  {
+  issuer: "CISCO NETWORKING ACADEMY",
+  title: "Cyber Threat Management",
+  category: "Cybersecurity",
+  mark: "CISCO",
+  markType: "cisco",
+},
 ];
 
 function CredentialIcon({
