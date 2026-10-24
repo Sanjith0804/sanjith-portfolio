@@ -10,6 +10,8 @@ const featuredCredentials = [
     featured: false,
     mark: "IBM",
     markType: "ibm",
+    certificate: "/certificates/Coursera_IBM Cyber Analayst.pdf",
+    skills: ["Cybersecurity", "Threat Analysis", "Linux", "Security Tools"],
   },
   {
     number: "02",
@@ -17,11 +19,13 @@ const featuredCredentials = [
     title: "Front-End Developer",
     type: "Professional Certificate",
     category: "Frontend Development",
-    date: "PROFESSIONAL CERTIFICATE",
+    date: "",
     status: "VERIFIED",
     featured: false,
     mark: "META",
     markType: "meta",
+    certificate: "/certificates/Coursera_Meta FE Dev.pdf",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Frontend Development"],
   },
   {
     number: "03",
@@ -34,6 +38,8 @@ const featuredCredentials = [
     featured: true,
     mark: "NPTEL",
     markType: "nptel",
+    certificate: "/certificates/NPTEL_Cryptography.pdf",
+    skills: ["Cryptography", "Network Security", "Encryption", "Security Protocols"],
   },
     {
     number: "04",
@@ -46,6 +52,8 @@ const featuredCredentials = [
     featured: false,
     mark: "NPTEL",
     markType: "nptel",
+    certificate: "/certificates/NPTEL_Intro to ML.pdf",
+    skills: ["Machine Learning", "Regression", "Classification", "Model Evaluation"],
   },
   {
     number: "05",
@@ -58,6 +66,8 @@ const featuredCredentials = [
     featured: false,
     mark: "D",
     markType: "deloitte",
+    certificate: "/certificates/Deloitte_certificate.pdf",
+    skills: ["Cybersecurity", "Security Awareness", "Threats & Risks"],
   },
   {
     number: "06",
@@ -70,6 +80,22 @@ const featuredCredentials = [
     featured: false,
     mark: "CISCO",
     markType: "cisco",
+    certificate: "/certificates/Cisco_Intro to cy.pdf",
+    skills: ["Cybersecurity Fundamentals", "Threats & Vulnerabilities", "Network Security"],
+  },
+  {
+    number: "07",
+    issuer: "ACCENTURE × FORAGE",
+    title: "Technology Consulting Job Simulation",
+    type: "Certificate of Completion",
+    category: "Technology Consulting",
+    date: "",
+    status: "VERIFIED",
+    featured: false,
+    mark: "A",
+    markType: "accenture",
+    certificate: "/certificates/Accenture Forage Certificate.pdf",
+    skills: ["Technology Consulting", "Problem Solving", "Business Analysis"],
   },
 ];
 
@@ -509,7 +535,7 @@ export default function Certifications() {
                 </p>
 
                 <p className="mt-1 text-2xl text-white">
-                  06
+                  07
                 </p>
               </div>
 
@@ -588,31 +614,40 @@ export default function Certifications() {
                 {credential.title}
               </h3>
 
-              {/* Bottom metadata */}
-              <div className="relative mt-7 flex flex-wrap items-end justify-between gap-4 border-t border-slate-800 pt-5">
-
-                <div>
-
-                  <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-700">
-                    STATUS
-                  </p>
-
-                  <p
-                    className={`mt-1 font-mono text-[9px] uppercase tracking-[0.12em] ${
-  credential.status === "ELITE"
-    ? "text-emerald-400"
-    : "text-emerald-400"
-}`}
-                  >
-                    ● {credential.status}
-                  </p>
-
+              {/* Skills */}
+              <div className="relative mt-6">
+                <p className="mb-3 font-mono text-[8px] uppercase tracking-[0.2em] text-slate-600">
+                  SKILLS COVERED
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {credential.skills.map((skill: string) => (
+                    <span
+                      key={skill}
+                      className="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-[10px] leading-4 text-slate-400 transition-colors hover:border-cyan-400/30 hover:text-cyan-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
+              </div>
 
-                <span className="font-mono text-[8px] uppercase tracking-[0.15em] text-slate-600">
-                  {credential.date}
-                </span>
+              {/* Certificate link and existing date */}
+              <div className="relative mt-7 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 pt-5">
+                <a
+                  href={credential.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-cyan-400/40 bg-cyan-400/5 px-4 py-2.5 font-mono text-[10px] text-cyan-300 transition-colors hover:border-cyan-300 hover:bg-cyan-400/10"
+                >
+                  View Certificate
+                  <span aria-hidden="true">↗</span>
+                </a>
 
+                {credential.date && (
+                  <span className="font-mono text-[8px] uppercase tracking-[0.15em] text-slate-600">
+                    {credential.date}
+                  </span>
+                )}
               </div>
             </article>
           ))}
@@ -698,7 +733,7 @@ export default function Certifications() {
           </span>
 
           <span>
-            06 CERTIFICATIONS
+            07 CERTIFICATIONS
           </span>
 
           <span>
