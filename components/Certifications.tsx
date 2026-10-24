@@ -10,7 +10,7 @@ const featuredCredentials = [
     featured: false,
     mark: "IBM",
     markType: "ibm",
-    certificate: "/certificates/Coursera_IBM Cyber Analayst.pdf",
+    certificate: "/certificates/Coursera_IBM Cy Analayst.pdf",
     skills: ["Cybersecurity", "Threat Analysis", "Linux", "Security Tools"],
   },
   {
@@ -94,7 +94,7 @@ const featuredCredentials = [
     featured: false,
     mark: "A",
     markType: "accenture",
-    certificate: "/certificates/Accenture Forage Certificate.pdf",
+    certificate: "/certificates/Accenture_Forage Certificate.pdf",
     skills: ["Technology Consulting", "Problem Solving", "Business Analysis"],
   },
 ];
