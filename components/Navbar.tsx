@@ -8,6 +8,7 @@ const navItems = [
   { label: "Education", href: "#education" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Research", href: "#research" },
   { label: "Experience", href: "#experience" },
   { label: "Credentials", href: "#certifications" },
   { label: "Contact", href: "#contact" },
@@ -32,30 +33,18 @@ export default function Navbar() {
           document.documentElement.scrollTop ||
           0;
 
-        /* -----------------------------------------
-           Scroll Progress
-        ----------------------------------------- */
-
         const documentHeight =
           document.documentElement.scrollHeight -
           window.innerHeight;
 
         const progress =
           documentHeight > 0
-            ? Math.min(
-                (scrollTop / documentHeight) * 100,
-                100
-              )
+            ? Math.min((scrollTop / documentHeight) * 100, 100)
             : 0;
 
         setScrollProgress(progress);
 
-        /* -----------------------------------------
-           Active Section
-        ----------------------------------------- */
-
         const activationOffset = 150;
-
         let currentSection = "about";
 
         for (const item of navItems) {
@@ -65,17 +54,12 @@ export default function Navbar() {
 
           if (!section) continue;
 
-          const sectionTop =
-            section.getBoundingClientRect().top;
+          const sectionTop = section.getBoundingClientRect().top;
 
           if (sectionTop <= activationOffset) {
             currentSection = section.id;
           }
         }
-
-        /* -----------------------------------------
-           Bottom of Page
-        ----------------------------------------- */
 
         const nearBottom =
           window.innerHeight + scrollTop >=
@@ -86,7 +70,6 @@ export default function Navbar() {
         }
 
         setActiveSection(currentSection);
-
         animationFrame = null;
       });
     };
@@ -124,7 +107,6 @@ export default function Navbar() {
 
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-800/70 bg-slate-950/85 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-
           {/* Brand */}
           <a
             href="#home"
@@ -175,7 +157,6 @@ export default function Navbar() {
 
                   {item.label}
 
-                  {/* Active / hover line */}
                   <span
                     className={`absolute bottom-0 left-1/2 h-px -translate-x-1/2 bg-cyan-400 transition-all duration-300 ${
                       isActive
@@ -208,25 +189,19 @@ export default function Navbar() {
             <div className="space-y-1.5">
               <span
                 className={`block h-px w-4 bg-slate-400 transition-transform ${
-                  menuOpen
-                    ? "translate-y-2 rotate-45"
-                    : ""
+                  menuOpen ? "translate-y-2 rotate-45" : ""
                 }`}
               />
 
               <span
                 className={`block h-px w-4 bg-slate-400 transition-opacity ${
-                  menuOpen
-                    ? "opacity-0"
-                    : ""
+                  menuOpen ? "opacity-0" : ""
                 }`}
               />
 
               <span
                 className={`block h-px w-4 bg-slate-400 transition-transform ${
-                  menuOpen
-                    ? "-translate-y-1.5 -rotate-45"
-                    : ""
+                  menuOpen ? "-translate-y-1.5 -rotate-45" : ""
                 }`}
               />
             </div>
