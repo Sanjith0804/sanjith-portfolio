@@ -80,13 +80,15 @@ const additionalBadges = [
     category: "AI",
     mark: "IBM",
     markType: "ibm",
+    issued: "Aug 2, 2026",
   },
   {
     issuer: "SAP",
-    title: "Generative AI Developer",
+    title: "SAP Certified - SAP Generative AI Developer",
     category: "Generative AI",
     mark: "SAP",
     markType: "sap",
+    issued: "May 21, 2026",
   },
   {
     issuer: "CISCO NETWORKING ACADEMY",
@@ -94,6 +96,7 @@ const additionalBadges = [
     category: "Systems",
     mark: "CISCO",
     markType: "cisco",
+    issued: "Nov 20, 2024",
   },
   {
   issuer: "CISCO NETWORKING ACADEMY",
@@ -109,7 +112,7 @@ const additionalBadges = [
   category: "Cybersecurity",
   mark: "CISCO",
   markType: "cisco",
-  issued: "Oct 20, 2026",
+  issued: "Sep 11, 2026",
 },
 {
   issuer: "CISCO NETWORKING ACADEMY",
