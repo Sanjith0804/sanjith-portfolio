@@ -108,6 +108,7 @@ const additionalBadges = [
   category: "Cybersecurity",
   mark: "CISCO",
   markType: "cisco",
+  issued: "Oct 20, 2026",
 },
 {
   issuer: "CISCO NETWORKING ACADEMY",
@@ -665,6 +666,11 @@ export default function Certifications() {
                 <p className="mt-3 text-sm text-slate-500">
                   {badge.issuer}
                 </p>
+                {badge.issued && (
+  <p className="mt-1 font-mono text-[10px] text-slate-500">
+    Issued {badge.issued}
+  </p>
+)}
 
                 <div className="mt-7 border-t border-slate-800 pt-4">
 
