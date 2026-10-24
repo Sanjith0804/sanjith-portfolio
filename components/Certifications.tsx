@@ -445,6 +445,25 @@ function ProviderMark({
   }
 
   /*
+   * ACCENTURE
+   * Transparent, cyan-themed wordmark; intentionally no logo tile.
+   */
+  if (markType === "accenture") {
+    return (
+      <div
+        className="flex h-12 w-28 shrink-0 items-center justify-center"
+        aria-label="Accenture"
+      >
+        <img
+          src="/accenture-logo.png"
+          alt="Accenture"
+          className="h-auto max-h-11 w-full object-contain"
+        />
+      </div>
+    );
+  }
+
+  /*
    * Fallback
    */
   return (
