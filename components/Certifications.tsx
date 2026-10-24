@@ -96,12 +96,13 @@ const additionalBadges = [
     markType: "cisco",
   },
   {
-    issuer: "CISCO NETWORKING ACADEMY",
-    title: "Cybersecurity Defense Analyst Career Path",
-    category: "Cybersecurity",
-    mark: "CISCO",
-    markType: "cisco",
-  },
+  issuer: "CISCO NETWORKING ACADEMY",
+  title: "Cybersecurity Defense Analyst Career Path",
+  category: "Cybersecurity",
+  mark: "CISCO",
+  markType: "cisco",
+  issued: "Oct 14, 2026",
+},
   {
   issuer: "CISCO NETWORKING ACADEMY",
   title: "Cyber Threat Management",
@@ -116,6 +117,7 @@ const additionalBadges = [
   category: "Cybersecurity",
   mark: "CISCO",
   markType: "cisco",
+  issued: "Jun 14, 2026",
 },
 ];
 
@@ -514,7 +516,7 @@ export default function Certifications() {
                 </p>
 
                 <p className="mt-1 text-2xl text-white">
-                  03
+                  06
                 </p>
               </div>
 
@@ -666,18 +668,18 @@ export default function Certifications() {
                 <p className="mt-3 text-sm text-slate-500">
                   {badge.issuer}
                 </p>
-                {badge.issued && (
-  <p className="mt-1 font-mono text-[10px] text-slate-500">
-    Issued {badge.issued}
-  </p>
-)}
-
                 <div className="mt-7 border-t border-slate-800 pt-4">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-emerald-400">
+                      ● RECORDED
+                    </span>
 
-                  <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-emerald-400">
-                    ● RECORDED
-                  </span>
-
+                    {badge.issued && (
+                      <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-slate-500">
+                        {badge.issued}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}
@@ -693,11 +695,11 @@ export default function Certifications() {
           </span>
 
           <span>
-            05 CERTIFICATIONS
+            06 CERTIFICATIONS
           </span>
 
           <span>
-            03 BADGES
+            06 BADGES
           </span>
 
           <span className="text-emerald-500/70">
