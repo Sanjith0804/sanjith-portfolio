@@ -66,6 +66,21 @@ function ValtechLogo() {
     </div>
   );
 }
+/* GTTC Logo */
+function GTTCLogo() {
+  return (
+    <div
+      className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-400/30 bg-white"
+      aria-label="GTTC"
+    >
+      <img
+        src="/gttc-logo.png"
+        alt="GTTC Logo"
+        className="h-full w-full object-contain"
+      />
+    </div>
+  );
+}
 
 export default function Experience() {
   return (
@@ -226,18 +241,18 @@ export default function Experience() {
 
                 </div>
 
-                {/* ROLE 01 */}
+                {/* ROLE 01 - VOLUNTEER */}
 
                 <div className="mt-10 grid gap-6 md:grid-cols-[150px_1fr]">
 
                   <div>
 
                     <p className="font-mono text-[9px] tracking-[0.2em] text-slate-600">
-                      YEAR 01
+                      JUN 2025
                     </p>
 
                     <p className="mt-2 text-sm text-slate-500">
-                      First Year
+                      APR 2026
                     </p>
 
                   </div>
@@ -262,6 +277,10 @@ export default function Experience() {
 
                     <p className="mt-1 text-sm text-cyan-400">
                       Foundation Literacy
+                    </p>
+
+                    <p className="mt-2 font-mono text-[10px] text-slate-500">
+                      JUN 2025 – APR 2026
                     </p>
 
                     <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400">
@@ -313,18 +332,18 @@ export default function Experience() {
 
                 </div>
 
-                {/* ROLE 02 */}
+                {/* ROLE 02 - CENTER LEADER */}
 
                 <div className="grid gap-6 md:grid-cols-[150px_1fr]">
 
                   <div>
 
                     <p className="font-mono text-[9px] tracking-[0.2em] text-cyan-400">
-                      YEAR 02
+                      APR 2026
                     </p>
 
                     <p className="mt-2 text-sm text-slate-500">
-                      Second Year
+                      PRESENT
                     </p>
 
                   </div>
@@ -349,6 +368,10 @@ export default function Experience() {
 
                     <p className="mt-1 text-sm text-cyan-400">
                       Kanasu Center
+                    </p>
+
+                    <p className="mt-2 font-mono text-[10px] text-slate-500">
+                      APR 2026 – PRESENT
                     </p>
 
                     <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400">
@@ -418,7 +441,7 @@ export default function Experience() {
               </p>
 
               <p className="mt-2 font-mono text-2xl font-semibold text-white">
-                2026
+                2025
               </p>
 
               <p className="mt-2 font-mono text-[8px] uppercase tracking-[0.15em] text-slate-700">
@@ -482,13 +505,17 @@ export default function Experience() {
                     </p>
 
                     <h4 className="mt-2 text-2xl font-semibold text-white">
-                      Frontend Developer Intern
+                      Internship Trainee
                     </h4>
+
+                    <p className="mt-2 font-mono text-xs text-cyan-400">
+                      AUG 2025 – SEP 2025
+                    </p>
 
                   </div>
 
                   <p className="mt-7 max-w-2xl text-sm leading-7 text-slate-400">
-                    Gained hands-on experience in frontend development
+                    Gained hands-on experience in web development
                     within a professional environment, working with
                     modern web technologies and collaborative development
                     workflows.
@@ -497,6 +524,7 @@ export default function Experience() {
                   <div className="mt-7 flex flex-wrap gap-2">
 
                     {[
+                      "Web Development",
                       "Frontend Development",
                       "Responsive UI",
                       "Web Technologies",
@@ -527,11 +555,11 @@ export default function Experience() {
                     <div>
 
                       <p className="font-mono text-[8px] text-slate-700">
-                        YEAR
+                        PERIOD
                       </p>
 
                       <p className="mt-1 font-mono text-xs text-slate-400">
-                        2026
+                        AUG – SEP 2025
                       </p>
 
                     </div>
@@ -671,7 +699,6 @@ export default function Experience() {
                       Parking, and more, using React and FastAPI, built from
                       scratch in an active industrial environment.
                     </p>
-
                     <p>
                       Currently leading hardware-software integration,
                       connecting physical security subsystems including NVRs,
