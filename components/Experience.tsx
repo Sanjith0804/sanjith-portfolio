@@ -1,3 +1,4 @@
+
 function ExperienceIcon() {
   return (
     <svg
@@ -142,7 +143,7 @@ export default function Experience() {
                 </p>
 
                 <p className="mt-1 text-2xl text-white">
-                  02
+                  03
                 </p>
 
               </div>
@@ -407,7 +408,7 @@ export default function Experience() {
           {/* VALTECH */}
           {/* ======================================= */}
 
-          <div className="relative lg:grid lg:grid-cols-[170px_1fr] lg:gap-12">
+          <div className="relative mb-24 lg:grid lg:grid-cols-[170px_1fr] lg:gap-12">
 
             {/* Timeline year */}
             <div className="hidden lg:block">
@@ -569,6 +570,194 @@ export default function Experience() {
 
           </div>
 
+          {/* ======================================= */}
+          {/* GTTC */}
+          {/* ======================================= */}
+
+          <div className="relative lg:grid lg:grid-cols-[170px_1fr] lg:gap-12">
+
+            {/* Timeline year */}
+            <div className="hidden lg:block">
+
+              <p className="font-mono text-[10px] tracking-[0.25em] text-cyan-400">
+                03
+              </p>
+
+              <p className="mt-2 font-mono text-2xl font-semibold text-white">
+                2026
+              </p>
+
+              <p className="mt-2 font-mono text-[8px] uppercase tracking-[0.15em] text-slate-700">
+                PROFESSIONAL
+              </p>
+
+            </div>
+
+            {/* Timeline node */}
+            <div className="absolute left-[79px] top-8 z-10 hidden h-4 w-4 rounded-full border-4 border-slate-950 bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.8)] lg:block" />
+
+            {/* GTTC Case File */}
+            <div className="group relative overflow-hidden rounded-2xl border border-cyan-400/20 bg-slate-950/75 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/40">
+
+              <div className="absolute left-0 top-0 h-px w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full" />
+
+              <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-cyan-400/5 blur-3xl transition-all duration-500 group-hover:bg-cyan-400/10" />
+
+              <div className="relative grid md:grid-cols-[1fr_190px]">
+
+                {/* Main */}
+                <div className="p-8 md:p-10">
+
+                  <div className="flex flex-wrap items-center gap-3">
+
+                    <span className="font-mono text-[9px] tracking-[0.25em] text-slate-600">
+                      EXPERIENCE_RECORD_03
+                    </span>
+
+                    <span className="h-1 w-1 rounded-full bg-slate-700" />
+
+                    <span className="font-mono text-[9px] tracking-[0.2em] text-cyan-400">
+                      PROFESSIONAL
+                    </span>
+
+                  </div>
+
+                  <div className="mt-7 flex items-center gap-5">
+
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400/30 bg-slate-900/70 font-mono text-sm font-bold text-cyan-400">
+                      GTTC
+                    </div>
+
+                    <div>
+
+                      <p className="font-mono text-[9px] tracking-[0.3em] text-slate-600">
+                        ORGANIZATION
+                      </p>
+
+                      <h3 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">
+                        GTTC
+                      </h3>
+
+                      <p className="mt-1 text-sm text-slate-500">
+                        Government Tool & Training Centre
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <div className="mt-7">
+
+                    <p className="font-mono text-[9px] tracking-[0.25em] text-slate-600">
+                      ROLE
+                    </p>
+
+                    <h4 className="mt-2 text-2xl font-semibold text-white">
+                      Software Development Intern
+                    </h4>
+
+                    <p className="mt-2 font-mono text-xs text-cyan-400">
+                      AUG 2026 – PRESENT
+                    </p>
+
+                  </div>
+
+                  <div className="mt-7 space-y-5 text-sm leading-7 text-slate-400">
+
+                    <p>
+                      Delivered a production-ready unified security dashboard
+                      with 8 integrated modules, including Video Surveillance,
+                      Access Control, AI Analytics, Fire & Emergency, Smart
+                      Parking, and more, using React and FastAPI, built from
+                      scratch in an active industrial environment.
+                    </p>
+
+                    <p>
+                      Currently leading hardware-software integration,
+                      connecting physical security subsystems including NVRs,
+                      access controllers, and sensors to the unified platform.
+                    </p>
+
+                  </div>
+
+                  <div className="mt-7 flex flex-wrap gap-2">
+
+                    {[
+                      "React",
+                      "FastAPI",
+                      "FFmpeg",
+                      "HLS Streaming",
+                      "NVR Integration",
+                      "Hardware-Software Integration",
+                      "Security Systems",
+                    ].map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-md border border-cyan-400/10 bg-cyan-400/5 px-3 py-1.5 font-mono text-[9px] text-slate-400 transition-colors hover:border-cyan-400/20 hover:text-cyan-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+
+                  </div>
+
+                </div>
+
+                {/* Metadata */}
+                <div className="border-t border-slate-800 bg-slate-900/20 p-8 md:border-l md:border-t-0">
+
+                  <p className="font-mono text-[8px] tracking-[0.2em] text-slate-700">
+                    RECORD
+                  </p>
+
+                  <div className="mt-6 space-y-6">
+
+                    <div>
+
+                      <p className="font-mono text-[8px] text-slate-700">
+                        PERIOD
+                      </p>
+
+                      <p className="mt-1 font-mono text-xs text-slate-400">
+                        AUG 2026
+                      </p>
+
+                    </div>
+
+                    <div>
+
+                      <p className="font-mono text-[8px] text-slate-700">
+                        STATUS
+                      </p>
+
+                      <p className="mt-1 font-mono text-[9px] text-emerald-400">
+                        ● CURRENT
+                      </p>
+
+                    </div>
+
+                    <div>
+
+                      <p className="font-mono text-[8px] text-slate-700">
+                        TYPE
+                      </p>
+
+                      <p className="mt-1 font-mono text-[9px] text-slate-400">
+                        INTERNSHIP
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
         {/* ========================================= */}
@@ -582,7 +771,7 @@ export default function Experience() {
           </span>
 
           <span>
-            02 ORGANIZATIONS
+            03 ORGANIZATIONS
           </span>
 
           <span>
