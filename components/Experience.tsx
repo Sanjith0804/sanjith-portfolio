@@ -66,11 +66,12 @@ function ValtechLogo() {
     </div>
   );
 }
+
 /* GTTC Logo */
 function GTTCLogo() {
   return (
     <div
-      className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-400/30 bg-white"
+      className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-400/30 bg-slate-950"
       aria-label="GTTC"
     >
       <img
@@ -90,9 +91,7 @@ export default function Experience() {
     >
       <div className="mx-auto max-w-6xl">
 
-        {/* ========================================= */}
         {/* HEADER */}
-        {/* ========================================= */}
 
         <div className="mb-20">
 
@@ -137,6 +136,7 @@ export default function Experience() {
             </div>
 
             {/* Record Status */}
+
             <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-5 font-mono">
 
               <div className="flex items-center justify-between">
@@ -168,13 +168,12 @@ export default function Experience() {
           </div>
         </div>
 
-        {/* ========================================= */}
         {/* MAIN TIMELINE */}
-        {/* ========================================= */}
 
         <div className="relative">
 
           {/* Main vertical line */}
+
           <div className="absolute left-[86px] top-0 hidden h-full w-px bg-gradient-to-b from-cyan-400/70 via-cyan-400/30 to-transparent lg:block" />
 
           {/* ======================================= */}
@@ -184,6 +183,7 @@ export default function Experience() {
           <div className="relative mb-24 lg:grid lg:grid-cols-[170px_1fr] lg:gap-12">
 
             {/* Timeline year */}
+
             <div className="hidden lg:block">
 
               <p className="font-mono text-[10px] tracking-[0.25em] text-cyan-400">
@@ -197,20 +197,21 @@ export default function Experience() {
             </div>
 
             {/* Timeline node */}
+
             <div className="absolute left-[79px] top-8 z-10 hidden h-4 w-4 rounded-full border-4 border-slate-950 bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.8)] lg:block" />
 
             {/* U&I CASE FILE */}
+
             <div className="group relative overflow-hidden rounded-2xl border border-cyan-400/20 bg-slate-950/75 backdrop-blur-xl transition-all duration-500 hover:border-cyan-400/40">
 
-              {/* Scan line */}
               <div className="absolute left-0 top-0 h-px w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full" />
 
-              {/* Glow */}
               <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-cyan-400/5 blur-3xl transition-all duration-500 group-hover:bg-cyan-400/10" />
 
               <div className="relative p-8 md:p-10">
 
                 {/* Organization Header */}
+
                 <div className="flex flex-col justify-between gap-6 border-b border-slate-800 pb-8 md:flex-row md:items-end">
 
                   <div className="flex items-center gap-5">
@@ -434,6 +435,7 @@ export default function Experience() {
           <div className="relative mb-24 lg:grid lg:grid-cols-[170px_1fr] lg:gap-12">
 
             {/* Timeline year */}
+
             <div className="hidden lg:block">
 
               <p className="font-mono text-[10px] tracking-[0.25em] text-cyan-400">
@@ -451,9 +453,11 @@ export default function Experience() {
             </div>
 
             {/* Timeline node */}
+
             <div className="absolute left-[79px] top-8 z-10 hidden h-4 w-4 rounded-full border-4 border-slate-950 bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.8)] lg:block" />
 
             {/* Valtech Case File */}
+
             <div className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/75 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
 
               <div className="absolute left-0 top-0 h-px w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full" />
@@ -605,6 +609,7 @@ export default function Experience() {
           <div className="relative lg:grid lg:grid-cols-[170px_1fr] lg:gap-12">
 
             {/* Timeline year */}
+
             <div className="hidden lg:block">
 
               <p className="font-mono text-[10px] tracking-[0.25em] text-cyan-400">
@@ -622,9 +627,11 @@ export default function Experience() {
             </div>
 
             {/* Timeline node */}
+
             <div className="absolute left-[79px] top-8 z-10 hidden h-4 w-4 rounded-full border-4 border-slate-950 bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.8)] lg:block" />
 
             {/* GTTC Case File */}
+
             <div className="group relative overflow-hidden rounded-2xl border border-cyan-400/20 bg-slate-950/75 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/40">
 
               <div className="absolute left-0 top-0 h-px w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full" />
@@ -634,6 +641,7 @@ export default function Experience() {
               <div className="relative grid md:grid-cols-[1fr_190px]">
 
                 {/* Main */}
+
                 <div className="p-8 md:p-10">
 
                   <div className="flex flex-wrap items-center gap-3">
@@ -652,9 +660,9 @@ export default function Experience() {
 
                   <div className="mt-7 flex items-center gap-5">
 
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400/30 bg-slate-900/70 font-mono text-sm font-bold text-cyan-400">
-                      GTTC
-                    </div>
+                    {/* Actual GTTC logo */}
+
+                    <GTTCLogo />
 
                     <div>
 
@@ -699,6 +707,7 @@ export default function Experience() {
                       Parking, and more, using React and FastAPI, built from
                       scratch in an active industrial environment.
                     </p>
+
                     <p>
                       Currently leading hardware-software integration,
                       connecting physical security subsystems including NVRs,
@@ -731,6 +740,7 @@ export default function Experience() {
                 </div>
 
                 {/* Metadata */}
+
                 <div className="border-t border-slate-800 bg-slate-900/20 p-8 md:border-l md:border-t-0">
 
                   <p className="font-mono text-[8px] tracking-[0.2em] text-slate-700">
@@ -787,9 +797,7 @@ export default function Experience() {
 
         </div>
 
-        {/* ========================================= */}
         {/* FOOTER STRIP */}
-        {/* ========================================= */}
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-y border-slate-800 py-4 font-mono text-[9px] uppercase tracking-[0.2em] text-slate-700">
 
