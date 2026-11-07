@@ -705,11 +705,7 @@ export default function Experience() {
                       with 8 integrated modules, including Video Surveillance,
                       Access Control, AI Analytics, Fire & Emergency, Smart
                       Parking, and more, using React and FastAPI, built from
-                      scratch in an active industrial environment.
-                    </p>
-
-                    <p>
-                      Currently leading hardware-software integration,
+                      scratch in an active industrial environment.Currently leading hardware-software integration,
                       connecting physical security subsystems including NVRs,
                       access controllers, and sensors to the unified platform.
                     </p>
